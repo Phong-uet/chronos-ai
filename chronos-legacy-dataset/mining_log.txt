@@ -1,0 +1,190 @@
+[12:04:18] ============================================================
+[12:04:49] ============================================================
+[12:04:49] 🚀 CHRONOS LEGACY CODE MINING PIPELINE v1.0
+[12:04:49]    Base directory: C:\Phong\chronos-ai\chronos-legacy-dataset
+[12:04:49]    GitHub Token:   Not set (60 req/hr limit)
+[12:04:49] ============================================================
+[12:04:49] 
+────────────────────────────────────────
+[12:04:49] PHASE 1: Cloning Known Legacy Repositories
+[12:04:49] ────────────────────────────────────────
+[12:04:49] 📦 Cloning cobol-programming-course → cobol_banking/
+[12:05:09]   ✓ Extracted 7 source files from cobol-programming-course
+[12:05:11] 📦 Cloning Tutorials → cobol_banking/
+[12:05:13]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\Tutorials'...
+remote: Repository not found.
+fatal: repository 'https://github.com/OpenCBT/Tutorials.git/' not found
+
+[12:05:14] 📦 Cloning COBOL-Banking-Example → cobol_banking/
+[12:05:16]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\COBOL-Banking-Example'...
+remote: Repository not found.
+fatal: repository 'https://github.com/mf-markchristie/COBOL-Banking-Exampl
+[12:05:17] 📦 Cloning cics-banking-sample-application-cbsa → cobol_banking/
+[12:05:19]   ✓ Extracted 0 source files from cics-banking-sample-application-cbsa
+[12:05:20] 📦 Cloning COBOL-samples → cobol_banking/
+[12:05:22]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\COBOL-samples'...
+remote: Repository not found.
+fatal: repository 'https://github.com/mikerowehl/COBOL-samples.git/' not found
+
+[12:05:23] 📦 Cloning openssl → c_legacy_crypto/
+[12:05:36]   ✓ Extracted 828 source files from openssl
+[12:05:39] 📦 Cloning crypto-algorithms → c_legacy_crypto/
+[12:05:42]   ✓ Extracted 30 source files from crypto-algorithms
+[12:05:44] 📦 Cloning tiny-AES-c → c_legacy_crypto/
+[12:05:46]   ✓ Extracted 4 source files from tiny-AES-c
+[12:05:47] 📦 Cloning cifern → c_legacy_crypto/
+[12:05:50]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\cifern'...
+remote: Repository not found.
+fatal: repository 'https://github.com/ctz/cifern.git/' not found
+
+[12:05:51] 📦 Cloning sha256.c → c_legacy_crypto/
+[12:05:53]   ✓ Extracted 6 source files from sha256.c
+[12:05:54] 📦 Cloning mbedtls → c_legacy_crypto/
+[12:05:57]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\mbedtls'...
+warning: Could not find remote branch mbedtls-2.16 to clone.
+fatal: Remote branch mbedtls-2.16 not found in upstream o
+[12:05:58] 📦 Cloning cmark → c_financial_math/
+[12:06:00]   ✓ Extracted 33 source files from cmark
+[12:06:01] 📦 Cloning stb → c_financial_math/
+[12:06:06]   ✓ Extracted 86 source files from stb
+[12:06:08] 📦 Cloning inih → c_financial_math/
+[12:06:11]   ✓ Extracted 13 source files from inih
+[12:06:12] 📦 Cloning klib → c_financial_math/
+[12:06:14]   ✓ Extracted 74 source files from klib
+[12:06:16] 📦 Cloning sds → c_financial_math/
+[12:06:18]   ✓ Extracted 4 source files from sds
+[12:06:19] 📦 Cloning clib → c_financial_math/
+[12:06:23]   ✓ Extracted 130 source files from clib
+[12:06:25] 📦 Cloning lapack → fortran_legacy/
+[12:06:49]   ✓ Extracted 2310 source files from lapack
+[12:06:57] 📦 Cloning Fortran-Astrodynamics-Toolk → fortran_legacy/
+[12:07:03]   ✓ Extracted 58 source files from Fortran-Astrodynamics-Toolk
+[12:07:04] 📦 Cloning fortran-utils → fortran_legacy/
+[12:07:07]   ✓ Extracted 96 source files from fortran-utils
+[12:07:09] 📦 Cloning M_strings → fortran_legacy/
+[12:07:15]   ✓ Extracted 118 source files from M_strings
+[12:07:17] 📦 Cloning Fortran-code-on-GitHub → fortran_legacy/
+[12:07:20]   ✓ Extracted 0 source files from Fortran-code-on-GitHub
+[12:07:21] 📦 Cloning cpp-cheatshee → cpp_legacy/
+[12:07:24]   ✓ Extracted 1 source files from cpp-cheatshee
+[12:07:25] 
+────────────────────────────────────────
+[12:07:25] PHASE 2: GitHub API Search & Clone
+[12:07:25] ────────────────────────────────────────
+[12:07:25] 🔍 Searching GitHub: 'COBOL banking language:COBOL' → cobol_banking/
+[12:07:27] 📦 Cloning CoBankin → cobol_banking/
+[12:07:29]   ✓ Extracted 17 source files from CoBankin
+[12:07:31] 📦 Cloning core-banking-system → cobol_banking/
+[12:07:34]   ✓ Extracted 5 source files from core-banking-system
+[12:07:36] 📦 Cloning cobol_bankin → cobol_banking/
+[12:07:38]   ✓ Extracted 13 source files from cobol_bankin
+[12:07:40] 📦 Cloning banking-cobol-jcl-db2 → cobol_banking/
+[12:07:43]   ✓ Extracted 4 source files from banking-cobol-jcl-db2
+[12:07:45] 📦 Cloning fintrust_cobol → cobol_banking/
+[12:07:48]   ✓ Extracted 6 source files from fintrust_cobol
+[12:07:50] 📦 Cloning cobol-legacy-ledger → cobol_banking/
+[12:07:56]   ✓ Extracted 30 source files from cobol-legacy-ledger
+[12:07:59] 📦 Cloning banking-batch-cobol-2016 → cobol_banking/
+[12:08:02]   ✓ Extracted 5 source files from banking-batch-cobol-2016
+[12:08:04] 📦 Cloning COBOL-Banking-System-Manager → cobol_banking/
+[12:08:06]   ✓ Extracted 1 source files from COBOL-Banking-System-Manager
+[12:08:08] 📦 Cloning COBOL--Chronicles → cobol_banking/
+[12:08:10]   ✓ Extracted 13 source files from COBOL--Chronicles
+[12:08:12] 📦 Cloning bank → cobol_banking/
+[12:08:15]   ✓ Extracted 10 source files from bank
+[12:08:20] 🔍 Searching GitHub: 'COBOL financial system language:COBOL' → cobol_banking/
+[12:08:21] 📦 Cloning cobol-enterprise-txn-processor → cobol_banking/
+[12:08:24]   ✓ Extracted 13 source files from cobol-enterprise-txn-processor
+[12:08:26] 📦 Cloning COBOL-extract-system → cobol_banking/
+[12:08:28]   ✓ Extracted 5 source files from COBOL-extract-system
+[12:08:30] 📦 Cloning Mini-Banking-System-COBOL- → cobol_banking/
+[12:08:36]   ✓ Extracted 21 source files from Mini-Banking-System-COBOL-
+[12:08:39] 📦 Cloning COBOL-Tutorial → cobol_banking/
+[12:08:42]   ✓ Extracted 9 source files from COBOL-Tutorial
+[12:08:44] 📦 Cloning Inventory-and-Sales-Management-System → cobol_banking/
+[12:08:46]   ✓ Extracted 1 source files from Inventory-and-Sales-Management-System
+[12:08:51] 🔍 Searching GitHub: 'SHA1_Init language:c' → c_legacy_crypto/
+[12:08:55] 🔍 Searching GitHub: 'MD5 implementation language:c' → c_legacy_crypto/
+[12:08:56] 📦 Cloning md5-c → c_legacy_crypto/
+[12:08:58]   ✓ Extracted 3 source files from md5-c
+[12:09:00] 📦 Cloning MD5 → c_legacy_crypto/
+[12:09:03]   ✓ Extracted 1 source files from MD5
+[12:09:05] 📦 Cloning merkle-tree → c_legacy_crypto/
+[12:09:07]   ✓ Extracted 4 source files from merkle-tree
+[12:09:09] 📦 Cloning md5-tunnelin → c_legacy_crypto/
+[12:09:12]   ✓ Extracted 1 source files from md5-tunnelin
+[12:09:14]   ⏭ Skipping mackron/md5 (already exists)
+[12:09:17] 🔍 Searching GitHub: 'amortization calculator language:c' → c_financial_math/
+[12:09:18] 📦 Cloning loan-amortization-c → c_financial_math/
+[12:09:20]   ✓ Extracted 5 source files from loan-amortization-c
+[12:09:22] 📦 Cloning Mortgage_Calculator → c_financial_math/
+[12:09:24]   ✓ Extracted 1 source files from Mortgage_Calculator
+[12:09:26] 📦 Cloning Amortization-Calc → c_financial_math/
+[12:09:29]   ✓ Extracted 4 source files from Amortization-Calc
+[12:09:31] 📦 Cloning AmortizationCalculator → c_financial_math/
+[12:09:33]   ✓ Extracted 1 source files from AmortizationCalculator
+[12:09:35]   ⏭ Skipping schoate7/AmortizationCalculator (already exists)
+[12:09:38] 🔍 Searching GitHub: 'compound interest language:c' → c_financial_math/
+[12:09:39] 📦 Cloning CompoundInteres → c_financial_math/
+[12:09:42]   ✓ Extracted 1 source files from CompoundInteres
+[12:09:44] 📦 Cloning CompoundInterest-Calculator → c_financial_math/
+[12:09:46]   ✓ Extracted 1 source files from CompoundInterest-Calculator
+[12:09:48] 📦 Cloning compound-interest-calculator- → c_financial_math/
+[12:09:55]   ✓ Extracted 1 source files from compound-interest-calculator-
+[12:09:57] 📦 Cloning COMPOUND-INTEREST-CALCULATOR → c_financial_math/
+[12:10:00]   ✓ Extracted 1 source files from COMPOUND-INTEREST-CALCULATOR
+[12:10:02] 📦 Cloning Compound-interest-code → c_financial_math/
+[12:10:04]   ✓ Extracted 1 source files from Compound-interest-code
+[12:10:09] 🔍 Searching GitHub: 'numerical computation language:fortran' → fortran_legacy/
+[12:10:10] 📦 Cloning jams_fortran → fortran_legacy/
+[12:10:31]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\jams_fortran'...
+fatal: unable to access 'https://github.com/mcuntz/jams_fortran.git/': Failed to connect to github.com port 443 a
+[12:10:33] 📦 Cloning OSFNTC → fortran_legacy/
+[12:10:55]   ✗ Clone failed: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\OSFNTC'...
+fatal: unable to access 'https://github.com/Bynaryman/OSFNTC.git/': Failed to connect to github.com port 443 after 2104
+[12:10:57] 📦 Cloning DATA_ANALYST → fortran_legacy/
+[12:11:00]   ✓ Extracted 1 source files from DATA_ANALYST
+[12:11:02] 📦 Cloning pfapack → fortran_legacy/
+[12:11:05]   ✓ Extracted 123 source files from pfapack
+[12:11:07] 📦 Cloning Numerical-Tangent-UMAT → fortran_legacy/
+[12:11:11]   ✓ Extracted 1 source files from Numerical-Tangent-UMAT
+[12:11:16] 🔍 Searching GitHub: 'legacy C++ raw pointer malloc' → cpp_legacy/
+[12:11:20] 
+────────────────────────────────────────
+[12:11:20] PHASE 3: Direct Raw File Downloads
+[12:11:20] ────────────────────────────────────────
+[12:11:20] 📥 Downloading additional raw source files...
+[12:11:21]   ✗ Failed to download https://raw.githubusercontent.com/openmainframeproject/cobol-programming-course/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/Labs/cbl/CBL0001.cobol: HTTP Error 404: Not Found
+[12:11:21]   ✗ Failed to download https://raw.githubusercontent.com/openmainframeproject/cobol-programming-course/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/Labs/cbl/CBL0002.cobol: HTTP Error 404: Not Found
+[12:11:21] 
+────────────────────────────────────────
+[12:11:21] PHASE 4: Generating Manifest
+[12:11:21] ────────────────────────────────────────
+[12:11:22] 📋 Manifest written: C:\Phong\chronos-ai\chronos-legacy-dataset\MANIFEST.json (4101 entries)
+[12:11:22] ============================================================
+[12:11:22] 📊 MINING COMPLETE - SUMMARY
+[12:11:22] ============================================================
+[12:11:22]   Repositories cloned:     49
+[12:11:22]   API searches executed:   8
+[12:11:22]   Source files extracted:   4101
+[12:11:22]   Files skipped:           1954
+[12:11:22]   Total dataset size:      48.72 MB
+[12:11:22]   Errors:                  9
+[12:11:22]   Error details:
+[12:11:22]     - Clone failed: Tutorials: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\Tutorials'...
+remote: Reposito
+[12:11:22]     - Clone failed: COBOL-Banking-Example: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\COBOL-Banking-Example'...
+remo
+[12:11:22]     - Clone failed: COBOL-samples: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\COBOL-samples'...
+remote: Repo
+[12:11:22]     - Clone failed: cifern: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\cifern'...
+remote: Repository 
+[12:11:22]     - Clone failed: mbedtls: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\mbedtls'...
+warning: Could not
+[12:11:22]     - Clone failed: jams_fortran: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\jams_fortran'...
+fatal: unable
+[12:11:22]     - Clone failed: OSFNTC: Cloning into 'C:\Phong\chronos-ai\chronos-legacy-dataset\_temp_clones\OSFNTC'...
+fatal: unable to ac
+[12:11:22]     - Download failed: https://raw.githubusercontent.com/openmainframeproject/cobol-programming-course/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/Labs/cbl/CBL0001.cobol: HTTP Error 404: Not Found
+[12:11:22]     - Download failed: https://raw.githubusercontent.com/openmainframeproject/cobol-programming-course/master/COBOL%20Programming%20Course%20%231%20-%20Getting%20Started/Labs/cbl/CBL0002.cobol: HTTP Error 404: Not Found
+[12:11:22] ============================================================
