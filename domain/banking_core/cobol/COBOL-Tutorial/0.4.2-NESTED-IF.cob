@@ -1,0 +1,27 @@
+       
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COBOL-CHECK-BALANCE.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+          01 WS-ACCOUNT-STATUS  PIC X(06)   VALUE "AKTIVE".
+          01 WS-ACCOUNT-BALANCE PIC 9(6)V99 VALUE 05000.00.
+          01 WS-TRANSFER-AMOUNT PIC 9(6)V99 VALUE 02000.00.
+          01 WS-DAILY-LIMIT     PIC 9(6)V99 VALUE 03000.00.
+
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           IF WS-ACCOUNT-STATUS = "AKTIVE"
+               IF WS-TRANSFER-AMOUNT <= WS-DAILY-LIMIT
+                   IF WS-TRANSFER-AMOUNT <= WS-ACCOUNT-BALANCE
+                       DISPLAY "ISLEM BASARILI."
+                   ELSE 
+                       DISPLAY "HATA: BAKIYE YETERSİZ!"
+                   END-IF
+               ELSE
+                   DISPLAY "HATA: GUNLUK LIMIT ASILDI!"
+               END-IF
+           ELSE 
+               DISPLAY "HATA: HESAP DURUMU AKTIF DEGIL!"
+           END-IF.
+
+           STOP RUN.

@@ -1,0 +1,1890 @@
+{
+  "generated_at": "2026-09-17",
+  "total_classified_categories": 6,
+  "categories": {
+    "domain/banking_core": {
+      "description": "Mã C/COBOL tính toán lãi suất, hạn mức tín dụng, sổ cái tài chính.",
+      "total_files": 174,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\bank.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\bank.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 231
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\get_transactions.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\get_transactions.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2467
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\get_transactions_api.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\get_transactions_api.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5485
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\get_transactions_odbc.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\get_transactions_odbc.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2040
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\insert_transaction.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\insert_transaction.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2318
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\insert_transaction_api.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\insert_transaction_api.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 10705
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\insert_transaction_odbc.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\insert_transaction_odbc.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1552
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\insert_transaction_odbc_api.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\insert_transaction_odbc_api.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 13362
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\bank\\interest_api.cob",
+          "classified_path": "domain\\banking_core\\cobol\\bank\\interest_api.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 10171
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Banking-System-Manager\\index.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Banking-System-Manager\\index.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1296
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-extract-system\\crt.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-extract-system\\crt.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1007
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-extract-system\\db2class.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-extract-system\\db2class.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 545
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-extract-system\\dlt.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-extract-system\\dlt.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 934
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-extract-system\\ret.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-extract-system\\ret.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 950
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-extract-system\\upt.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-extract-system\\upt.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1016
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.0-Hello-World.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.0-Hello-World.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 584
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.1.0-Variable-Types.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.1.0-Variable-Types.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 632
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.2.0-Move-Risk.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.2.0-Move-Risk.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 911
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.3.0-Arithmetic-Operations-ADD.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.3.0-Arithmetic-Operations-ADD.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 947
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.3.0-Arithmetic-Operations-SUBTRACT.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.3.0-Arithmetic-Operations-SUBTRACT.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 947
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.3.1-subtract.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.3.1-subtract.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1931
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.4.0-if-else.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.4.0-if-else.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 604
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.4.1-AND-AND_NOT.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.4.1-AND-AND_NOT.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 793
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL-Tutorial\\0.4.2-NESTED-IF.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL-Tutorial\\0.4.2-NESTED-IF.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 983
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\core-banking-system\\ACCOUNTS.CPY",
+          "classified_path": "domain\\banking_core\\cobol\\core-banking-system\\ACCOUNTS.CPY",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 416
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\core-banking-system\\BANK-MAIN.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\core-banking-system\\BANK-MAIN.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1108
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\core-banking-system\\INIT-DB.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\core-banking-system\\INIT-DB.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1439
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\core-banking-system\\REPORT-GEN.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\core-banking-system\\REPORT-GEN.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2013
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\core-banking-system\\TRANS-PROC.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\core-banking-system\\TRANS-PROC.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3510
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\mainmenu.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\mainmenu.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1798
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Inventory-and-Sales-Management-System\\COBOL-PROJECT.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\Inventory-and-Sales-Management-System\\COBOL-PROJECT.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 44904
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\BANKER.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\BANKER.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 199
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\hello.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\hello.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 349
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\KONTOOPL.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\KONTOOPL.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 214
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\KUNDE-AML.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\KUNDE-AML.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 199
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\KUNDER.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\KUNDER.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 566
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave10.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave10.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4052
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave11.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave11.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4329
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave2.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave2.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1002
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave3.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave3.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2573
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave4.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave4.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1232
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave5.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave5.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 880
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave6.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave6.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 831
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave7.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave7.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2763
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave8.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave8.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2421
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave9.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave9.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1895
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\SANCTION.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\SANCTION.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 380
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\TRANS.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\TRANS.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 571
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave11\\Opgave11.cob",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave11\\Opgave11.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 10151
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\Opgave11\\TRANS.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\Opgave11\\TRANS.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 494
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\opgave12\\FRAUDDET.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\opgave12\\FRAUDDET.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 6970
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\Mini-Banking-System-COBOL-\\opgave8\\KONTOOPL.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\Mini-Banking-System-COBOL-\\opgave8\\KONTOOPL.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 144
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\programs\\account_management.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\programs\\account_management.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 502
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\programs\\authenticate_user.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\programs\\authenticate_user.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 497
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\programs\\hello.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\programs\\hello.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 196
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\programs\\ledger_summary.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\programs\\ledger_summary.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 495
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\fintrust_cobol\\programs\\view_transactions.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\fintrust_cobol\\programs\\view_transactions.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 503
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\add_user.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\add_user.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5537
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\clear_database.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\clear_database.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1676
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\create_db_files.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\create_db_files.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2107
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\delete_user.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\delete_user.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2641
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\edit_user.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\edit_user.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4002
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\filter_users.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\filter_users.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 9172
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\find_user.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\find_user.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2168
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\generate_new_id.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\generate_new_id.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1680
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\import_balance_csv.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\import_balance_csv.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2068
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\import_user_csv.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\import_user_csv.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2124
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\main_program.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\main_program.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1861
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\show_users.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\show_users.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3605
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol_bankin\\cobol\\sum_top_n_balance.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol_bankin\\cobol\\sum_top_n_balance.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4211
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #4 - Testing\\Labs\\cbl\\DEPTPAY.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #4 - Testing\\Labs\\cbl\\DEPTPAY.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1454
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #4 - Testing\\Labs\\cbl\\EMPPAY.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #4 - Testing\\Labs\\cbl\\EMPPAY.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2056
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB21.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB21.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 9445
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB22.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB22.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 13183
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB23.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Labs\\cbl\\CBLDB23.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 12215
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Challenges\\Debugging\\cbl\\CBL0106.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Challenges\\Debugging\\cbl\\CBL0106.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 7342
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Challenges\\Debugging\\cbl\\CBL0106C.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-programming-course\\COBOL Programming Course #3 - Advanced Topics\\Challenges\\Debugging\\cbl\\CBL0106C.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 7800
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\ACCTIO.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\ACCTIO.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3015
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\ACCTREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\ACCTREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3153
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\COMCODE.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\COMCODE.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3168
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\SIMREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\SIMREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5411
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\TRANSREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\copybooks\\TRANSREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2772
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\ACCOUNTS.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\ACCOUNTS.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 19581
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\FEES.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\FEES.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 14824
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\INTEREST.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\INTEREST.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 14171
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\RECONCILE.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\RECONCILE.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 15134
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\REPORTS.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\REPORTS.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 13301
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SETTLE.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SETTLE.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 17268
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SIMULATE.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SIMULATE.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 21846
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SMOKETEST.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\SMOKETEST.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 16547
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\TRANSACT.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\TRANSACT.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 31402
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\src\\VALIDATE.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\src\\VALIDATE.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 8968
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\DISPREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\DISPREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5714
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\EMPREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\EMPREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 7191
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\FEEREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\FEEREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4455
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\MERCHREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\MERCHREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5657
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\PAYCOM.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\PAYCOM.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5046
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\PAYREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\PAYREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1853
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\TAXREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\copybooks\\TAXREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2944
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\DEDUCTN.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\DEDUCTN.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 17863
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\DISPUTE.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\DISPUTE.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 25336
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\FEEENGN.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\FEEENGN.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 26398
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\MERCHANT.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\MERCHANT.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 23109
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\PAYBATCH.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\PAYBATCH.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 19428
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\PAYROLL.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\PAYROLL.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 25927
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\RISKCHK.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\RISKCHK.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 28364
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\TAXCALC.cob",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\TAXCALC.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 15612
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\ACTREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\ACTREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2149
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\AUDREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\AUDREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1932
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\ERRREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\ERRREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1944
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\JRNREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\JRNREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1582
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\RPTFLD.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\RPTFLD.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2245
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\copybooks\\TXNREC.cpy",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\copybooks\\TXNREC.cpy",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1916
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\AUDIT00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\AUDIT00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 23045
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\GENDATA0.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\GENDATA0.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 95901
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\LEDGR00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\LEDGR00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 15651
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\RECON00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\RECON00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 23256
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\REGRPT00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\REGRPT00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 31056
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\TXNPRC00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\TXNPRC00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 33054
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-enterprise-txn-processor\\src\\programs\\TXNVAL00.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\cobol-enterprise-txn-processor\\src\\programs\\TXNVAL00.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 31928
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 01\\helloworld.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 01\\helloworld.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 166
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 02\\calculator.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 02\\calculator.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 801
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 03\\arith-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 03\\arith-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1123
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 04\\file-handling.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 04\\file-handling.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 374
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 04\\iteration.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 04\\iteration.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 374
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 05\\condition-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 05\\condition-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 895
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 06\\string-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 06\\string-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 909
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 07\\table-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 07\\table-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 701
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 08\\input-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 08\\input-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 442
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 09\\report-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 09\\report-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 745
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 10\\date-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 10\\date-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 592
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 11\\paragraph-demo.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 11\\paragraph-demo.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 595
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\COBOL--Chronicles\\Session 12\\student-average.cob",
+          "classified_path": "domain\\banking_core\\cobol\\COBOL--Chronicles\\Session 12\\student-average.cob",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 626
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\Bhaskara.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\Bhaskara.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5041
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\CircumArea.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\CircumArea.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2791
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\create.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\create.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3953
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\indx.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\indx.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 8549
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\leitura.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\leitura.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3701
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\media.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\media.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4291
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\test.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\test.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4728
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\old\\CLIc.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\old\\CLIc.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5683
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\old\\CLIe.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\old\\CLIe.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 7194
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\old\\CLIi.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\old\\CLIi.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5930
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\old\\CLIop.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\old\\CLIop.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 7330
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\src\\bank_account_registry.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\src\\bank_account_registry.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3279
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\college\\Biblioteca.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\college\\Biblioteca.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5221
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\college\\Devolucao.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\college\\Devolucao.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 10928
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\college\\Emprestimo.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\college\\Emprestimo.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 9698
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\college\\Livros.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\college\\Livros.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 13095
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\CoBankin\\libs\\college\\SOCIOS.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\CoBankin\\libs\\college\\SOCIOS.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 11211
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-cobol-jcl-db2\\COBOL\\ACCTMSTR.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\banking-cobol-jcl-db2\\COBOL\\ACCTMSTR.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 9532
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-cobol-jcl-db2\\COBOL\\INTCALC.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\banking-cobol-jcl-db2\\COBOL\\INTCALC.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 4964
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-cobol-jcl-db2\\COBOL\\RECONCIL.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\banking-cobol-jcl-db2\\COBOL\\RECONCIL.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 5319
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-cobol-jcl-db2\\COBOL\\UTILITY.cbl",
+          "classified_path": "domain\\banking_core\\cobol\\banking-cobol-jcl-db2\\COBOL\\UTILITY.cbl",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 1104
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\COPYBOOKS\\ACCOUNT.CPY",
+          "classified_path": "domain\\banking_core\\cobol\\banking-batch-cobol-2016\\COPYBOOKS\\ACCOUNT.CPY",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3697
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\COPYBOOKS\\CUSTOMER.CPY",
+          "classified_path": "domain\\banking_core\\cobol\\banking-batch-cobol-2016\\COPYBOOKS\\CUSTOMER.CPY",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 2727
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\COPYBOOKS\\TRANSACT.CPY",
+          "classified_path": "domain\\banking_core\\cobol\\banking-batch-cobol-2016\\COPYBOOKS\\TRANSACT.CPY",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 3594
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\PROGRAMS\\BATCHPROC.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\banking-batch-cobol-2016\\PROGRAMS\\BATCHPROC.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 21020
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\PROGRAMS\\RPTGEN.CBL",
+          "classified_path": "domain\\banking_core\\cobol\\banking-batch-cobol-2016\\PROGRAMS\\RPTGEN.CBL",
+          "type": "COBOL Core Banking / Ledger",
+          "size_bytes": 12415
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\Amortization-Calc\\loanCalc.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\Amortization-Calc\\loanCalc.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 910
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\Amortization-Calc\\loanCalcArr.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\Amortization-Calc\\loanCalcArr.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1520
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\Amortization-Calc\\loanCalcPtr.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\Amortization-Calc\\loanCalcPtr.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1364
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\Amortization-Calc\\loanCalcStruct.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\Amortization-Calc\\loanCalcStruct.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1421
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\AmortizationCalculator\\main.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\AmortizationCalculator\\main.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 3859
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\COMPOUND-INTEREST-CALCULATOR\\compound interest calculator.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\COMPOUND-INTEREST-CALCULATOR\\compound interest calculator.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 689
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\compound-interest-calculator-\\main.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\compound-interest-calculator-\\main.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1086
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\Compound-interest-code\\compound interest.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\Compound-interest-code\\compound interest.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 886
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\CompoundInteres\\compundinterest.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\CompoundInteres\\compundinterest.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 786
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\CompoundInterest-Calculator\\compoundinterest.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\CompoundInterest-Calculator\\compoundinterest.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 903
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\loan-amortization-c\\loan.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\loan-amortization-c\\loan.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1843
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\loan-amortization-c\\loanCalc(1).c",
+          "classified_path": "domain\\banking_core\\c_calculators\\loan-amortization-c\\loanCalc(1).c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1507
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\loan-amortization-c\\loanCalcArr.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\loan-amortization-c\\loanCalcArr.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1698
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\loan-amortization-c\\loanCalcPtr.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\loan-amortization-c\\loanCalcPtr.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1983
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\loan-amortization-c\\loanCalcStruct.c",
+          "classified_path": "domain\\banking_core\\c_calculators\\loan-amortization-c\\loanCalcStruct.c",
+          "type": "C Interest & Loan Payment Calculator",
+          "size_bytes": 1843
+        }
+      ]
+    },
+    "domain/legacy_crypto": {
+      "description": "Các module băm dữ liệu cổ SHA-1, MD5, mã hóa RSA-1024 / DES.",
+      "total_files": 61,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\des.c",
+          "classified_path": "domain\\legacy_crypto\\algorithms_suite\\crypto-algorithms_des.c",
+          "algorithm": "algorithms_suite",
+          "size_bytes": 12890
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\des.h",
+          "classified_path": "domain\\legacy_crypto\\algorithms_suite\\crypto-algorithms_des.h",
+          "algorithm": "algorithms_suite",
+          "size_bytes": 1521
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\des_test.c",
+          "classified_path": "domain\\legacy_crypto\\algorithms_suite\\crypto-algorithms_des_test.c",
+          "algorithm": "algorithms_suite",
+          "size_bytes": 3457
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\crypto-algorithms_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 6021
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\md5.h",
+          "classified_path": "domain\\legacy_crypto\\md5\\crypto-algorithms_md5.h",
+          "algorithm": "md5",
+          "size_bytes": 1220
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\md5_test.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\crypto-algorithms_md5_test.c",
+          "algorithm": "md5",
+          "size_bytes": 2157
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\sha1.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\crypto-algorithms_sha1.c",
+          "algorithm": "sha1",
+          "size_bytes": 4090
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\sha1.h",
+          "classified_path": "domain\\legacy_crypto\\sha1\\crypto-algorithms_sha1.h",
+          "algorithm": "sha1",
+          "size_bytes": 1238
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\crypto-algorithms\\sha1_test.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\crypto-algorithms_sha1_test.c",
+          "algorithm": "sha1",
+          "size_bytes": 2141
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\MD5\\md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\MD5_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 5153
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\md5-c\\main.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5-c_main.c",
+          "algorithm": "md5",
+          "size_bytes": 513
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\md5-c\\md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5-c_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 8041
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\md5-c\\md5.h",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5-c_md5.h",
+          "algorithm": "md5",
+          "size_bytes": 665
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\md5-tunnelin\\tunneling.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5-tunnelin_tunneling.c",
+          "algorithm": "md5",
+          "size_bytes": 76949
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\merkle-tree\\md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\merkle-tree_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 11531
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\merkle-tree\\md5.h",
+          "classified_path": "domain\\legacy_crypto\\md5\\merkle-tree_md5.h",
+          "algorithm": "md5",
+          "size_bytes": 2297
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\cbc_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_cbc_enc.c",
+          "algorithm": "des",
+          "size_bytes": 3341
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des.c",
+          "algorithm": "des",
+          "size_bytes": 28150
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des.h",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des.h",
+          "algorithm": "des",
+          "size_bytes": 12170
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\destest.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_destest.c",
+          "algorithm": "des",
+          "size_bytes": 35978
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_enc.c",
+          "algorithm": "des",
+          "size_bytes": 12967
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_locl.h",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_locl.h",
+          "algorithm": "des",
+          "size_bytes": 16779
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_old.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_old.c",
+          "algorithm": "des",
+          "size_bytes": 13661
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_old.h",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_old.h",
+          "algorithm": "des",
+          "size_bytes": 21983
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_old2.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_old2.c",
+          "algorithm": "des",
+          "size_bytes": 3635
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_opts.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_opts.c",
+          "algorithm": "des",
+          "size_bytes": 18095
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_ver.h",
+          "classified_path": "domain\\legacy_crypto\\des\\des_des_ver.h",
+          "algorithm": "des",
+          "size_bytes": 3710
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\ecb_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_ecb_enc.c",
+          "algorithm": "des",
+          "size_bytes": 4736
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\fcrypt.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_fcrypt.c",
+          "algorithm": "des",
+          "size_bytes": 5125
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\ncbc_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_ncbc_enc.c",
+          "algorithm": "des",
+          "size_bytes": 6033
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\pcbc_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_pcbc_enc.c",
+          "algorithm": "des",
+          "size_bytes": 4969
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\rpc_des.h",
+          "classified_path": "domain\\legacy_crypto\\des\\des_rpc_des.h",
+          "algorithm": "des",
+          "size_bytes": 5816
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\set_key.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_set_key.c",
+          "algorithm": "des",
+          "size_bytes": 19090
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\xcbc_enc.c",
+          "classified_path": "domain\\legacy_crypto\\des\\des_xcbc_enc.c",
+          "algorithm": "des",
+          "size_bytes": 8732
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\evp\\e_aes_cbc_hmac_sha1.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\evp_e_aes_cbc_hmac_sha1.c",
+          "algorithm": "sha1",
+          "size_bytes": 20633
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\evp\\e_rc4_hmac_md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\evp_e_rc4_hmac_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 10470
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\evp\\m_md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\evp_m_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 4150
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\evp\\m_sha1.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\evp_m_sha1.c",
+          "algorithm": "sha1",
+          "size_bytes": 7096
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5.c",
+          "algorithm": "md5",
+          "size_bytes": 4491
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5.h",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5.h",
+          "algorithm": "md5",
+          "size_bytes": 4904
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5test.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5test.c",
+          "algorithm": "md5",
+          "size_bytes": 5075
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5_dgst.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5_dgst.c",
+          "algorithm": "md5",
+          "size_bytes": 8504
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5_locl.h",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5_locl.h",
+          "algorithm": "md5",
+          "size_bytes": 5608
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\md5\\md5_one.c",
+          "classified_path": "domain\\legacy_crypto\\md5\\md5_md5_one.c",
+          "algorithm": "md5",
+          "size_bytes": 4116
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa.h",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa.h",
+          "algorithm": "rsa1024",
+          "size_bytes": 27503
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_eay.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_eay.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 30088
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_gen.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_gen.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 9165
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_lib.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_lib.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 9988
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_oaep.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_oaep.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 8568
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_pk1.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_pk1.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 9402
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_pmeth.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_pmeth.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 20725
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_saos.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_saos.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 5878
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_sign.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_sign.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 11497
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\rsa\\rsa_ssl.c",
+          "classified_path": "domain\\legacy_crypto\\rsa1024\\rsa_rsa_ssl.c",
+          "algorithm": "rsa1024",
+          "size_bytes": 5544
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha.h",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha.h",
+          "algorithm": "sha1",
+          "size_bytes": 8143
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha1.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha1.c",
+          "algorithm": "sha1",
+          "size_bytes": 4460
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha1dgst.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha1dgst.c",
+          "algorithm": "sha1",
+          "size_bytes": 3588
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha1test.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha1test.c",
+          "algorithm": "sha1",
+          "size_bytes": 5982
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha1_one.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha1_one.c",
+          "algorithm": "sha1",
+          "size_bytes": 3720
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha_dgst.c",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha_dgst.c",
+          "algorithm": "sha1",
+          "size_bytes": 3586
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\sha\\sha_locl.h",
+          "classified_path": "domain\\legacy_crypto\\sha1\\sha_sha_locl.h",
+          "algorithm": "sha1",
+          "size_bytes": 19790
+        }
+      ]
+    },
+    "domain/math_matrix": {
+      "description": "Thuật toán ma trận, đại số tuyến tính, tính toán tài chính định lượng.",
+      "total_files": 45,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dgesv.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgesv.f",
+          "module": "LAPACK",
+          "size_bytes": 5264
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dgesvd.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgesvd.f",
+          "module": "LAPACK",
+          "size_bytes": 141513
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6541
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dgetrs.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgetrs.f",
+          "module": "LAPACK",
+          "size_bytes": 6205
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dpotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dpotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 7513
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dpotrs.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dpotrs.f",
+          "module": "LAPACK",
+          "size_bytes": 5539
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\dsyev.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dsyev.f",
+          "module": "LAPACK",
+          "size_bytes": 8711
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\sgesv.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgesv.f",
+          "module": "LAPACK",
+          "size_bytes": 5256
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\sgesvd.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgesvd.f",
+          "module": "LAPACK",
+          "size_bytes": 140677
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\sgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6529
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\sgetrs.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgetrs.f",
+          "module": "LAPACK",
+          "size_bytes": 6181
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\spotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\spotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 7501
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\spotrs.f",
+          "classified_path": "domain\\math_matrix\\lapack\\spotrs.f",
+          "module": "LAPACK",
+          "size_bytes": 5515
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\ssyev.f",
+          "classified_path": "domain\\math_matrix\\lapack\\ssyev.f",
+          "module": "LAPACK",
+          "size_bytes": 8765
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\CR\\dgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6223
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\CR\\sgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6211
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\LL\\dgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6924
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\LL\\sgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6915
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\REC\\dgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 8397
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\lu\\REC\\sgetrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\sgetrf.f",
+          "module": "LAPACK",
+          "size_bytes": 8385
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\cholesky\\RL\\dpotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dpotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6808
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\cholesky\\RL\\spotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\spotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6796
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\cholesky\\TOP\\dpotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\dpotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6597
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\SRC\\VARIANTS\\cholesky\\TOP\\spotrf.f",
+          "classified_path": "domain\\math_matrix\\lapack\\spotrf.f",
+          "module": "LAPACK",
+          "size_bytes": 6583
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\cgemm.f",
+          "classified_path": "domain\\math_matrix\\blas\\cgemm.f",
+          "module": "BLAS",
+          "size_bytes": 16076
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\cgemv.f",
+          "classified_path": "domain\\math_matrix\\blas\\cgemv.f",
+          "module": "BLAS",
+          "size_bytes": 9742
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dgemm.f",
+          "classified_path": "domain\\math_matrix\\blas\\dgemm.f",
+          "module": "BLAS",
+          "size_bytes": 13060
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dgemv.f",
+          "classified_path": "domain\\math_matrix\\blas\\dgemv.f",
+          "module": "BLAS",
+          "size_bytes": 9152
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dsymm.f",
+          "classified_path": "domain\\math_matrix\\blas\\dsymm.f",
+          "module": "BLAS",
+          "size_bytes": 11500
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dsyrk.f",
+          "classified_path": "domain\\math_matrix\\blas\\dsyrk.f",
+          "module": "BLAS",
+          "size_bytes": 11103
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dtrmm.f",
+          "classified_path": "domain\\math_matrix\\blas\\dtrmm.f",
+          "module": "BLAS",
+          "size_bytes": 12551
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\dtrsm.f",
+          "classified_path": "domain\\math_matrix\\blas\\dtrsm.f",
+          "module": "BLAS",
+          "size_bytes": 12805
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\sgemm.f",
+          "classified_path": "domain\\math_matrix\\blas\\sgemm.f",
+          "module": "BLAS",
+          "size_bytes": 12926
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\sgemv.f",
+          "classified_path": "domain\\math_matrix\\blas\\sgemv.f",
+          "module": "BLAS",
+          "size_bytes": 9018
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\ssymm.f",
+          "classified_path": "domain\\math_matrix\\blas\\ssymm.f",
+          "module": "BLAS",
+          "size_bytes": 11382
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\ssyrk.f",
+          "classified_path": "domain\\math_matrix\\blas\\ssyrk.f",
+          "module": "BLAS",
+          "size_bytes": 10981
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\strmm.f",
+          "classified_path": "domain\\math_matrix\\blas\\strmm.f",
+          "module": "BLAS",
+          "size_bytes": 12441
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\strsm.f",
+          "classified_path": "domain\\math_matrix\\blas\\strsm.f",
+          "module": "BLAS",
+          "size_bytes": 12681
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\zgemm.f",
+          "classified_path": "domain\\math_matrix\\blas\\zgemm.f",
+          "module": "BLAS",
+          "size_bytes": 16120
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\lapack\\BLAS\\SRC\\zgemv.f",
+          "classified_path": "domain\\math_matrix\\blas\\zgemv.f",
+          "module": "BLAS",
+          "size_bytes": 9782
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\skpf10.c",
+          "classified_path": "domain\\math_matrix\\c_quantitative\\skpf10.c",
+          "module": "C Quantitative Matrix / Linear Algebra",
+          "size_bytes": 8817
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\skpfa.c",
+          "classified_path": "domain\\math_matrix\\c_quantitative\\skpfa.c",
+          "module": "C Quantitative Matrix / Linear Algebra",
+          "size_bytes": 8540
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\sktrd.c",
+          "classified_path": "domain\\math_matrix\\c_quantitative\\sktrd.c",
+          "module": "C Quantitative Matrix / Linear Algebra",
+          "size_bytes": 12293
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\skbtrd.c",
+          "classified_path": "domain\\math_matrix\\c_quantitative\\skbtrd.c",
+          "module": "C Quantitative Matrix / Linear Algebra",
+          "size_bytes": 10121
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\khmm.c",
+          "classified_path": "domain\\math_matrix\\c_quantitative\\khmm.c",
+          "module": "C Quantitative Matrix / Linear Algebra",
+          "size_bytes": 11248
+        }
+      ]
+    },
+    "tech/struct_alignment": {
+      "description": "Code chứa C-struct căn chỉnh bộ nhớ 24-bytes thủ công.",
+      "total_files": 9,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\deprecated\\stb.h",
+          "classified_path": "tech\\struct_alignment\\deprecated_stb.h",
+          "alignment_characteristic": "24-byte struct alignment logic (malloc_base, line 2910)",
+          "size_bytes": 430675
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\kexpr.c",
+          "classified_path": "tech\\struct_alignment\\klib_kexpr.c",
+          "alignment_characteristic": "Bitfield packed 24-byte operator struct (n_args:24, ke1_s)",
+          "size_bytes": 17522
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\kstring.h",
+          "classified_path": "tech\\struct_alignment\\klib_kstring.h",
+          "alignment_characteristic": "24-byte struct header layout (size_t l, m; char *s)",
+          "size_bytes": 7322
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\kvec.h",
+          "classified_path": "tech\\struct_alignment\\klib_kvec.h",
+          "alignment_characteristic": "24-byte dynamic vector header (size_t n, m; type *a)",
+          "size_bytes": 2970
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\des\\des_old.h",
+          "classified_path": "tech\\struct_alignment\\des_des_old.h",
+          "alignment_characteristic": "Manual struct padding for 8/24-byte alignment (DES_LONG pad[2])",
+          "size_bytes": 21983
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\ec\\ec_curve.c",
+          "classified_path": "tech\\struct_alignment\\ec_ec_curve.c",
+          "alignment_characteristic": "Manual 24-byte coordinate buffer packing for elliptic curve data",
+          "size_bytes": 114148
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\stb_truetype.h",
+          "classified_path": "tech\\struct_alignment\\stb_stb_truetype.h",
+          "alignment_characteristic": "Manual struct packing & padding (stbtt_pack_context, stbtt_vertex)",
+          "size_bytes": 204271
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\tests\\prerelease\\stb_lib.h",
+          "classified_path": "tech\\struct_alignment\\prerelease_stb_lib.h",
+          "alignment_characteristic": "Manual multiple of 16/24 padding in struct header",
+          "size_bytes": 110088
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\tests\\caveview\\cave_render.c",
+          "classified_path": "tech\\struct_alignment\\caveview_cave_render.c",
+          "alignment_characteristic": "Manual cache alignment struct padding (int padding[13])",
+          "size_bytes": 30470
+        }
+      ]
+    },
+    "tech/spaghetti_logic": {
+      "description": "Code rẽ nhánh phức tạp, vòng lặp lồng nhau, switch-case không break.",
+      "total_files": 9,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\cmark\\src\\scanners.c",
+          "classified_path": "tech\\spaghetti_logic\\cmark_scanners.c",
+          "spaghetti_pattern": "Complex state machine: 3,069 goto jumps, 50 switch fallthroughs",
+          "size_bytes": 194218
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\clib\\deps\\gumbo-parser\\tokenizer.c",
+          "classified_path": "tech\\spaghetti_logic\\gumbo_tokenizer.c",
+          "spaghetti_pattern": "Dense tokenizer: 89 switch-case fallthroughs without break",
+          "size_bytes": 119807
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\cmark\\src\\node.c",
+          "classified_path": "tech\\spaghetti_logic\\cmark_node.c",
+          "spaghetti_pattern": "Nested control flow: 20 switch fallthroughs",
+          "size_bytes": 17859
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\asn1\\tasn_dec.c",
+          "classified_path": "tech\\spaghetti_logic\\openssl_tasn_dec.c",
+          "spaghetti_pattern": "ASN.1 decoder engine: 47 gotos, 10 switch fallthroughs",
+          "size_bytes": 41119
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_legacy_crypto\\openssl\\crypto\\bn\\bn_mul.c",
+          "classified_path": "tech\\spaghetti_logic\\openssl_bn_mul.c",
+          "spaghetti_pattern": "Multiprecision multiplication: 19 gotos, deeply nested loops",
+          "size_bytes": 34607
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\MERCHANT.cob",
+          "classified_path": "tech\\spaghetti_logic\\MERCHANT.cob",
+          "spaghetti_pattern": "COBOL spaghetti: 40 GO TO statements",
+          "size_bytes": 23109
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\PAYROLL.cob",
+          "classified_path": "tech\\spaghetti_logic\\PAYROLL.cob",
+          "spaghetti_pattern": "COBOL spaghetti: 28 GO TO statements, nested PERFORM",
+          "size_bytes": 25927
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\cobol-legacy-ledger\\COBOL-BANKING\\payroll\\src\\DISPUTE.cob",
+          "classified_path": "tech\\spaghetti_logic\\DISPUTE.cob",
+          "spaghetti_pattern": "COBOL spaghetti: 19 GO TO statements, 33 PERFORM loops",
+          "size_bytes": 25336
+        },
+        {
+          "source": "chronos-legacy-dataset\\cobol_banking\\banking-batch-cobol-2016\\PROGRAMS\\BATCHPROC.CBL",
+          "classified_path": "tech\\spaghetti_logic\\BATCHPROC.CBL",
+          "spaghetti_pattern": "COBOL batch processor: 19 GO TO statements, complex branching",
+          "size_bytes": 21020
+        }
+      ]
+    },
+    "tech/memory_unsafe": {
+      "description": "Code dùng con trỏ thô, cấp phát bộ nhớ động `malloc`/`free`.",
+      "total_files": 10,
+      "files": [
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\deprecated\\stb.h",
+          "classified_path": "tech\\memory_unsafe\\stb.h",
+          "memory_pattern": "112 malloc/realloc calls, 102 free calls, manual block allocators",
+          "size_bytes": 430675
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\stb\\stb_image.h",
+          "classified_path": "tech\\memory_unsafe\\stb_image.h",
+          "memory_pattern": "11 malloc, 14 free calls, raw pointer buffer walking",
+          "size_bytes": 290998
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\sds\\sds.c",
+          "classified_path": "tech\\memory_unsafe\\sds.c",
+          "memory_pattern": "Raw pointer tricks (s[-1] header offset), malloc/realloc/free",
+          "size_bytes": 43279
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\clib\\src\\common\\clib-package.c",
+          "classified_path": "tech\\memory_unsafe\\clib-package.c",
+          "memory_pattern": "Dynamic struct management: 10 mallocs, 53 frees, raw pointers",
+          "size_bytes": 41099
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\clib\\src\\clib-configure.c",
+          "classified_path": "tech\\memory_unsafe\\clib-configure.c",
+          "memory_pattern": "5 mallocs, 21 frees with manual memory lifecycle",
+          "size_bytes": 16839
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\khmm.c",
+          "classified_path": "tech\\memory_unsafe\\khmm.c",
+          "memory_pattern": "2D dynamic matrix allocation (double **), 12 mallocs, 43 frees",
+          "size_bytes": 11248
+        },
+        {
+          "source": "chronos-legacy-dataset\\c_financial_math\\klib\\kopen.c",
+          "classified_path": "tech\\memory_unsafe\\kopen.c",
+          "memory_pattern": "Low-level buffer allocation: 12 mallocs, 11 frees",
+          "size_bytes": 9494
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\skpf10.c",
+          "classified_path": "tech\\memory_unsafe\\skpf10.c",
+          "memory_pattern": "Raw pointer interface array allocation: 14 mallocs, 18 frees",
+          "size_bytes": 8817
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\skpfa.c",
+          "classified_path": "tech\\memory_unsafe\\skpfa.c",
+          "memory_pattern": "Raw pointer interface array allocation: 14 mallocs, 18 frees",
+          "size_bytes": 8540
+        },
+        {
+          "source": "chronos-legacy-dataset\\fortran_legacy\\pfapack\\original_source\\c_interface\\sktrd.c",
+          "classified_path": "tech\\memory_unsafe\\sktrd.c",
+          "memory_pattern": "Raw pointer matrix transforms: 12 mallocs, 12 frees",
+          "size_bytes": 12293
+        }
+      ]
+    }
+  }
+}

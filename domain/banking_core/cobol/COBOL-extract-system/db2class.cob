@@ -1,0 +1,25 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. ConnectDB.
+
+ENVIRONMENT DIVISION.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01  WS-DB2-CONNECTION.
+    05  WS-USERID     PIC X(08) VALUE 'youruserid'.
+    05  WS-PASSWORD   PIC X(08) VALUE 'yourpassword'.
+
+PROCEDURE DIVISION.
+MAIN-SECTION.
+    EXEC SQL
+        CONNECT TO 'yourdatabase'
+        USER :WS-USERID
+        USING :WS-PASSWORD
+    END-EXEC.
+
+    IF SQLCODE = 0
+        DISPLAY 'Connection successful.'
+    ELSE
+        DISPLAY 'Connection failed: ' SQLCODE.
+
+    STOP RUN.
