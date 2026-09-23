@@ -1,0 +1,34 @@
+{
+  "gold_sample_count": 3,
+  "samples": [
+    {
+      "file": "cluster_0_mortgage.c",
+      "original_file": "mortgage.c",
+      "cluster_id": 0,
+      "cluster_type": "business_logic",
+      "distance_to_centroid": 3.7079,
+      "risks": []
+    },
+    {
+      "file": "cluster_1_transaction.c",
+      "original_file": "transaction.c",
+      "cluster_id": 1,
+      "cluster_type": "memory_unsafe",
+      "distance_to_centroid": 0.0,
+      "risks": [
+        "RISK_FLOAT_PRECISION",
+        "RISK_STRUCT_OFFSET"
+      ]
+    },
+    {
+      "file": "cluster_2_hash.c",
+      "original_file": "hash.c",
+      "cluster_id": 2,
+      "cluster_type": "legacy_crypto",
+      "distance_to_centroid": 0.0,
+      "risks": [
+        "RISK_QUANTUM_VULNERABLE"
+      ]
+    }
+  ]
+}

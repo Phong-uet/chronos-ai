@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-20 22:43:34",
+    "python_version": "3.12.10",
+    "algorithm": "kmeans",
+    "clusters": 3,
+    "random_seed": 42,
+    "feature_count": 53,
+    "feature_names": [
+      "code_lines",
+      "logical_loc",
+      "total_lines",
+      "cyclomatic_complexity",
+      "branch_count",
+      "loop_count",
+      "if_count",
+      "switch_count",
+      "goto_count",
+      "function_count",
+      "avg_function_loc",
+      "max_function_loc",
+      "avg_parameter_count",
+      "max_function_complexity",
+      "avg_function_complexity",
+      "raw_pointer_count",
+      "pointer_declaration_count",
+      "pointer_dereference_count",
+      "pointer_arithmetic_count",
+      "pointer_member_access_count",
+      "void_pointer_count",
+      "dynamic_allocation_count",
+      "malloc_count",
+      "calloc_count",
+      "realloc_count",
+      "free_count",
+      "new_count",
+      "delete_count",
+      "allocation_free_ratio",
+      "precision_loss_count",
+      "double_to_float_count",
+      "long_to_int_count",
+      "explicit_precision_cast_count",
+      "struct_count",
+      "struct_total_fields",
+      "estimated_struct_size",
+      "estimated_padding_bytes",
+      "max_struct_padding",
+      "legacy_crypto_count",
+      "sha1_count",
+      "md5_count",
+      "rsa_count",
+      "static_array_count",
+      "linked_list_pattern_count",
+      "matrix_pattern_count",
+      "tensor_pattern_count",
+      "bitwise_operation_count",
+      "has_sha1",
+      "has_md5",
+      "has_legacy_rsa",
+      "has_legacy_crypto",
+      "has_malloc",
+      "has_linked_list"
+    ]
+  },
+  "interpretations": {
+    "2": {
+      "cluster_id": 2,
+      "interpreted_type": "legacy_crypto",
+      "confidence": 0.98,
+      "dominant_features": [
+        "legacy_crypto_count",
+        "has_sha1",
+        "has_md5",
+        "rsa_count"
+      ]
+    },
+    "1": {
+      "cluster_id": 1,
+      "interpreted_type": "memory_unsafe",
+      "confidence": 0.96,
+      "dominant_features": [
+        "raw_pointer_count",
+        "dynamic_allocation_count",
+        "pointer_arithmetic"
+      ]
+    },
+    "0": {
+      "cluster_id": 0,
+      "interpreted_type": "business_logic",
+      "confidence": 0.88,
+      "dominant_features": [
+        "cyclomatic_complexity",
+        "code_lines",
+        "branch_count"
+      ]
+    }
+  },
+  "clusters": {
+    "0": [
+      {
+        "file": "interest.c",
+        "file_path": "D:\\chronos-ai\\source-code\\banking\\interest.c",
+        "code_lines": 45,
+        "complexity": 16
+      },
+      {
+        "file": "mortgage.c",
+        "file_path": "D:\\chronos-ai\\source-code\\banking\\mortgage.c",
+        "code_lines": 22,
+        "complexity": 6
+      },
+      {
+        "file": "cipher.c",
+        "file_path": "D:\\chronos-ai\\source-code\\crypto\\cipher.c",
+        "code_lines": 12,
+        "complexity": 1
+      },
+      {
+        "file": "rsa.c",
+        "file_path": "D:\\chronos-ai\\source-code\\crypto\\rsa.c",
+        "code_lines": 20,
+        "complexity": 3
+      },
+      {
+        "file": "buffer.c",
+        "file_path": "D:\\chronos-ai\\source-code\\memory\\buffer.c",
+        "code_lines": 38,
+        "complexity": 6
+      },
+      {
+        "file": "packet.h",
+        "file_path": "D:\\chronos-ai\\source-code\\memory\\packet.h",
+        "code_lines": 20,
+        "complexity": 1
+      },
+      {
+        "file": "pool.cpp",
+        "file_path": "D:\\chronos-ai\\source-code\\memory\\pool.cpp",
+        "code_lines": 27,
+        "complexity": 2
+      }
+    ],
+    "1": [
+      {
+        "file": "transaction.c",
+        "file_path": "D:\\chronos-ai\\source-code\\banking\\transaction.c",
+        "code_lines": 87,
+        "complexity": 31
+      }
+    ],
+    "2": [
+      {
+        "file": "hash.c",
+        "file_path": "D:\\chronos-ai\\source-code\\crypto\\hash.c",
+        "code_lines": 32,
+        "complexity": 3
+      }
+    ]
+  }
+}

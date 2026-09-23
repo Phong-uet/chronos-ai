@@ -1,0 +1,31 @@
+[
+  {
+    "file_path": "D:\\chronos-ai\\source-code\\banking\\mortgage.c",
+    "file_name": "mortgage.c",
+    "cluster_id": 0,
+    "cluster_type": "business_logic",
+    "distance_to_centroid": 3.7079,
+    "risks": []
+  },
+  {
+    "file_path": "D:\\chronos-ai\\source-code\\banking\\transaction.c",
+    "file_name": "transaction.c",
+    "cluster_id": 1,
+    "cluster_type": "memory_unsafe",
+    "distance_to_centroid": 0.0,
+    "risks": [
+      "RISK_FLOAT_PRECISION",
+      "RISK_STRUCT_OFFSET"
+    ]
+  },
+  {
+    "file_path": "D:\\chronos-ai\\source-code\\crypto\\hash.c",
+    "file_name": "hash.c",
+    "cluster_id": 2,
+    "cluster_type": "legacy_crypto",
+    "distance_to_centroid": 0.0,
+    "risks": [
+      "RISK_QUANTUM_VULNERABLE"
+    ]
+  }
+]

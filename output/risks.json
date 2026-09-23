@@ -1,0 +1,365 @@
+[
+  {
+    "file": "interest.c",
+    "file_path": "D:\\chronos-ai\\source-code\\banking\\interest.c",
+    "risk": "RISK_FLOAT_PRECISION",
+    "severity": "medium",
+    "description": "Potential precision loss detected in floating-point or integer conversions.",
+    "recommendation": "Review implicit type demotions and cast bounds to avoid arithmetic truncation.",
+    "evidence": [
+      {
+        "line": 28,
+        "type": "implicit_double_to_float",
+        "code": "float truncated_estimate = total; // precision loss",
+        "reason": "Implicit assignment from double 'total' to float 'truncated_estimate'"
+      },
+      {
+        "line": 28,
+        "type": "implicit_double_to_float",
+        "code": "float truncated_estimate = total; // precision loss",
+        "reason": "Initialization of float 'truncated_estimate' from double 'total'"
+      }
+    ]
+  },
+  {
+    "file": "transaction.c",
+    "file_path": "D:\\chronos-ai\\source-code\\banking\\transaction.c",
+    "risk": "RISK_FLOAT_PRECISION",
+    "severity": "medium",
+    "description": "Potential precision loss detected in floating-point or integer conversions.",
+    "recommendation": "Review implicit type demotions and cast bounds to avoid arithmetic truncation.",
+    "evidence": [
+      {
+        "line": 23,
+        "type": "implicit_double_to_float",
+        "code": "float fee = current_bal; // Implicit precision loss signal",
+        "reason": "Implicit assignment from double 'current_bal' to float 'fee'"
+      },
+      {
+        "line": 104,
+        "type": "implicit_long_to_int",
+        "code": "int log_time = timestamp; // Implicit long to int",
+        "reason": "Implicit assignment from long 'timestamp' to int 'log_time'"
+      },
+      {
+        "line": 23,
+        "type": "implicit_double_to_float",
+        "code": "float fee = current_bal; // Implicit precision loss signal",
+        "reason": "Initialization of float 'fee' from double 'current_bal'"
+      },
+      {
+        "line": 104,
+        "type": "implicit_long_to_int",
+        "code": "int log_time = timestamp; // Implicit long to int",
+        "reason": "Initialization of int 'log_time' from long 'timestamp'"
+      }
+    ]
+  },
+  {
+    "file": "transaction.c",
+    "file_path": "D:\\chronos-ai\\source-code\\banking\\transaction.c",
+    "risk": "RISK_STRUCT_OFFSET",
+    "severity": "low",
+    "description": "Estimated struct alignment padding (8 bytes total) may cause serialization or memory layout discrepancies.",
+    "recommendation": "Reorder struct fields from largest alignment to smallest, or verify compiler packing directives (#pragma pack).",
+    "evidence": [
+      {
+        "struct_name": "Account",
+        "line": 11,
+        "estimated_size": 32,
+        "estimated_padding": 8,
+        "field_order": [
+          "account_id",
+          "balance",
+          "credit_limit",
+          "status"
+        ],
+        "reason": "Struct 'Account' contains estimated 8 bytes of alignment padding."
+      }
+    ]
+  },
+  {
+    "file": "hash.c",
+    "file_path": "D:\\chronos-ai\\source-code\\crypto\\hash.c",
+    "risk": "RISK_QUANTUM_VULNERABLE",
+    "severity": "high",
+    "description": "Legacy cryptographic primitive detected (SHA-1/MD5/RSA) vulnerable to collision or quantum attacks.",
+    "recommendation": "Consider migration to modern cryptographic primitives (e.g. SHA-256, SHA-3) and post-quantum cryptography (PQC) standards where appropriate.",
+    "evidence": [
+      {
+        "line": 21,
+        "code": "void SHA1_Init(SHA_CTX *ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Init detected at line 21"
+      },
+      {
+        "line": 35,
+        "code": "SHA1_Init(&sha1_ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Init detected at line 35"
+      },
+      {
+        "line": 22,
+        "code": "void SHA1_Update(SHA_CTX *ctx, const void *data, unsigned long len);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Update detected at line 22"
+      },
+      {
+        "line": 36,
+        "code": "SHA1_Update(&sha1_ctx, payload, (unsigned long)length);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Update detected at line 36"
+      },
+      {
+        "line": 23,
+        "code": "void SHA1_Final(unsigned char md[20], SHA_CTX *ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Final detected at line 23"
+      },
+      {
+        "line": 37,
+        "code": "SHA1_Final(out_sha1, &sha1_ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA1_Final detected at line 37"
+      },
+      {
+        "line": 12,
+        "code": "} SHA_CTX;",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA_CTX detected at line 12"
+      },
+      {
+        "line": 21,
+        "code": "void SHA1_Init(SHA_CTX *ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA_CTX detected at line 21"
+      },
+      {
+        "line": 22,
+        "code": "void SHA1_Update(SHA_CTX *ctx, const void *data, unsigned long len);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA_CTX detected at line 22"
+      },
+      {
+        "line": 23,
+        "code": "void SHA1_Final(unsigned char md[20], SHA_CTX *ctx);",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA_CTX detected at line 23"
+      },
+      {
+        "line": 34,
+        "code": "SHA_CTX sha1_ctx;",
+        "algorithm": "SHA1",
+        "reason": "Legacy cryptographic primitive SHA_CTX detected at line 34"
+      },
+      {
+        "line": 25,
+        "code": "void MD5_Init(MD5_CTX *ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Init detected at line 25"
+      },
+      {
+        "line": 40,
+        "code": "MD5_Init(&md5_ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Init detected at line 40"
+      },
+      {
+        "line": 26,
+        "code": "void MD5_Update(MD5_CTX *ctx, const void *data, unsigned long len);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Update detected at line 26"
+      },
+      {
+        "line": 41,
+        "code": "MD5_Update(&md5_ctx, payload, (unsigned long)length);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Update detected at line 41"
+      },
+      {
+        "line": 27,
+        "code": "void MD5_Final(unsigned char md[16], MD5_CTX *ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Final detected at line 27"
+      },
+      {
+        "line": 42,
+        "code": "MD5_Final(out_md5, &md5_ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_Final detected at line 42"
+      },
+      {
+        "line": 2,
+        "code": "* hash.c - Legacy cryptography hashing routines (SHA-1 and MD5).",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5 detected at line 2"
+      },
+      {
+        "line": 18,
+        "code": "} MD5_CTX;",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_CTX detected at line 18"
+      },
+      {
+        "line": 25,
+        "code": "void MD5_Init(MD5_CTX *ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_CTX detected at line 25"
+      },
+      {
+        "line": 26,
+        "code": "void MD5_Update(MD5_CTX *ctx, const void *data, unsigned long len);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_CTX detected at line 26"
+      },
+      {
+        "line": 27,
+        "code": "void MD5_Final(unsigned char md[16], MD5_CTX *ctx);",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_CTX detected at line 27"
+      },
+      {
+        "line": 39,
+        "code": "MD5_CTX md5_ctx;",
+        "algorithm": "MD5",
+        "reason": "Legacy cryptographic primitive MD5_CTX detected at line 39"
+      }
+    ]
+  },
+  {
+    "file": "rsa.c",
+    "file_path": "D:\\chronos-ai\\source-code\\crypto\\rsa.c",
+    "risk": "RISK_QUANTUM_VULNERABLE",
+    "severity": "high",
+    "description": "Legacy cryptographic primitive detected (SHA-1/MD5/RSA) vulnerable to collision or quantum attacks.",
+    "recommendation": "Consider migration to modern cryptographic primitives (e.g. SHA-256, SHA-3) and post-quantum cryptography (PQC) standards where appropriate.",
+    "evidence": [
+      {
+        "line": 10,
+        "code": "RSA *RSA_generate_key(int bits, unsigned long e, void (*callback)(int, int, void *), void *cb_arg);",
+        "algorithm": "RSA",
+        "reason": "Legacy cryptographic primitive RSA_generate_key detected at line 10"
+      },
+      {
+        "line": 20,
+        "code": "RSA *key = RSA_generate_key(key_size_bits, 65537, NULL, NULL);",
+        "algorithm": "RSA",
+        "reason": "Legacy cryptographic primitive RSA_generate_key detected at line 20"
+      },
+      {
+        "line": 12,
+        "code": "int RSA_private_encrypt(int flen, const unsigned char *from, unsigned char *to, RSA *rsa, int padding);",
+        "algorithm": "RSA",
+        "reason": "Legacy cryptographic primitive RSA_private_encrypt detected at line 12"
+      },
+      {
+        "line": 11,
+        "code": "int RSA_public_encrypt(int flen, const unsigned char *from, unsigned char *to, RSA *rsa, int padding);",
+        "algorithm": "RSA",
+        "reason": "Legacy cryptographic primitive RSA_public_encrypt detected at line 11"
+      },
+      {
+        "line": 28,
+        "code": "int encrypted_len = RSA_public_encrypt(22, input, encrypted, key, 1);",
+        "algorithm": "RSA",
+        "reason": "Legacy cryptographic primitive RSA_public_encrypt detected at line 28"
+      },
+      {
+        "line": 13,
+        "code": "void DES_set_key(const void *key, void *schedule);",
+        "algorithm": "DES",
+        "reason": "Legacy cryptographic primitive DES_set_key detected at line 13"
+      }
+    ]
+  },
+  {
+    "file": "buffer.c",
+    "file_path": "D:\\chronos-ai\\source-code\\memory\\buffer.c",
+    "risk": "RISK_MEMORY_LEAK",
+    "severity": "medium",
+    "description": "Potential memory leak: dynamic allocations exceed frees in file analysis.",
+    "recommendation": "Ensure all allocated heap buffers have corresponding deallocation routines across all execution branches.",
+    "evidence": [
+      {
+        "line": 16,
+        "code": "malloc(capacity)",
+        "reason": "Dynamic allocation with possible lack of local free/release in current scope"
+      },
+      {
+        "line": 28,
+        "code": "malloc(sizeof(int) * 4)",
+        "reason": "Dynamic allocation with possible lack of local free/release in current scope"
+      }
+    ]
+  },
+  {
+    "file": "buffer.c",
+    "file_path": "D:\\chronos-ai\\source-code\\memory\\buffer.c",
+    "risk": "RISK_STRUCT_OFFSET",
+    "severity": "low",
+    "description": "Estimated struct alignment padding (4 bytes total) may cause serialization or memory layout discrepancies.",
+    "recommendation": "Reorder struct fields from largest alignment to smallest, or verify compiler packing directives (#pragma pack).",
+    "evidence": [
+      {
+        "struct_name": "Node",
+        "line": 9,
+        "estimated_size": 24,
+        "estimated_padding": 4,
+        "field_order": [
+          "id",
+          "data",
+          "next"
+        ],
+        "reason": "Struct 'Node' contains estimated 4 bytes of alignment padding."
+      }
+    ]
+  },
+  {
+    "file": "packet.h",
+    "file_path": "D:\\chronos-ai\\source-code\\memory\\packet.h",
+    "risk": "RISK_STRUCT_OFFSET",
+    "severity": "low",
+    "description": "Estimated struct alignment padding (1 bytes total) may cause serialization or memory layout discrepancies.",
+    "recommendation": "Reorder struct fields from largest alignment to smallest, or verify compiler packing directives (#pragma pack).",
+    "evidence": [
+      {
+        "struct_name": "MemoryChunk",
+        "line": 23,
+        "estimated_size": 24,
+        "estimated_padding": 1,
+        "field_order": [
+          "chunk_id",
+          "flags",
+          "total_size",
+          "raw_data"
+        ],
+        "reason": "Struct 'MemoryChunk' contains estimated 1 bytes of alignment padding."
+      }
+    ]
+  },
+  {
+    "file": "pool.cpp",
+    "file_path": "D:\\chronos-ai\\source-code\\memory\\pool.cpp",
+    "risk": "RISK_MEMORY_LEAK",
+    "severity": "high",
+    "description": "Potential memory leak: dynamic allocations exceed frees in file analysis.",
+    "recommendation": "Ensure all allocated heap buffers have corresponding deallocation routines across all execution branches.",
+    "evidence": [
+      {
+        "line": 15,
+        "code": "new char[s]",
+        "reason": "Dynamic allocation with possible lack of local free/release in current scope"
+      },
+      {
+        "line": 33,
+        "code": "malloc(sz)",
+        "reason": "Dynamic allocation with possible lack of local free/release in current scope"
+      },
+      {
+        "line": 34,
+        "code": "new int(100)",
+        "reason": "Dynamic allocation with possible lack of local free/release in current scope"
+      }
+    ]
+  }
+]

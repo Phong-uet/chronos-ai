@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Legacy Code Profiling & Gold Sample Report</title>
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-green: #4ade80;
+            --accent-red: #f43f5e;
+            --accent-amber: #fbbf24;
+            --accent-purple: #a855f7;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 32px 24px;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .subtitle { color: var(--text-secondary); font-size: 1rem; }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .kpi-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-top: 4px;
+        }
+        .kpi-label { color: var(--text-secondary); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        .section-title {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+            margin-top: 32px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background-color: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .gold-card {
+            background: linear-gradient(145deg, #1e293b, #172033);
+            border: 1px solid #3b82f6;
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .gold-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--accent-amber);
+            border: 1px solid var(--accent-amber);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .gold-title { font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 8px; word-break: break-all; }
+        .gold-meta { color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 12px; }
+        .badge-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .badge {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+        .badge-risk {
+            background: rgba(244, 63, 94, 0.12);
+            color: var(--accent-red);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            border: 1px solid var(--border);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #182234;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        tr:hover td { background-color: var(--bg-card-hover); }
+
+        .viz-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .viz-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .viz-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Chronos Legacy C/C++ Code Profiling Pipeline</h1>
+        <div class="subtitle">Automated static analysis, multi-dimensional feature clustering, and gold sample selection</div>
+    </header>
+
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-label">Analyzed Files</div>
+            <div class="kpi-value">9</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">Total LOC</div>
+            <div class="kpi-value">303</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">Avg LOC / File</div>
+            <div class="kpi-value">33.7</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">Avg Complexity</div>
+            <div class="kpi-value">7.7</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Selected Gold Benchmark Samples</h2>
+    <div class="cards-grid">
+
+        <div class="gold-card">
+            <div class="gold-badge">Cluster 0</div>
+            <div class="gold-title">mortgage.c</div>
+            <div class="gold-meta">Interpreted Archetype: <strong>business_logic</strong></div>
+            <div class="gold-meta">Distance to Centroid: <strong>3.7079</strong></div>
+            <div class="badge-list">
+                <span class="badge">No High Risks</span>
+            </div>
+        </div>
+        
+        <div class="gold-card">
+            <div class="gold-badge">Cluster 1</div>
+            <div class="gold-title">transaction.c</div>
+            <div class="gold-meta">Interpreted Archetype: <strong>memory_unsafe</strong></div>
+            <div class="gold-meta">Distance to Centroid: <strong>0.0</strong></div>
+            <div class="badge-list">
+                <span class="badge badge-risk">RISK_FLOAT_PRECISION</span><span class="badge badge-risk">RISK_STRUCT_OFFSET</span>
+            </div>
+        </div>
+        
+        <div class="gold-card">
+            <div class="gold-badge">Cluster 2</div>
+            <div class="gold-title">hash.c</div>
+            <div class="gold-meta">Interpreted Archetype: <strong>legacy_crypto</strong></div>
+            <div class="gold-meta">Distance to Centroid: <strong>0.0</strong></div>
+            <div class="badge-list">
+                <span class="badge badge-risk">RISK_QUANTUM_VULNERABLE</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <h2 class="section-title">Cluster Visualizations & Risk Distribution</h2>
+    <div class="viz-container">
+        <div class="viz-box">
+            <img src="cluster_visualization.png" alt="PCA Cluster Visualization">
+        </div>
+        <div class="viz-box">
+            <img src="risk_distribution.png" alt="Risk Distribution">
+        </div>
+    </div>
+
+    <h2 class="section-title">Analyzed Files Manifest</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Cluster</th>
+                <th>LOC</th>
+                <th>Complexity</th>
+                <th>Pointers</th>
+                <th>Mallocs</th>
+                <th>Crypto</th>
+                <th>Risks Detected</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td><strong>interest.c</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>45</td>
+                <td>16</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>RISK_FLOAT_PRECISION</td>
+            </tr>
+        
+            <tr>
+                <td><strong>mortgage.c</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>22</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>None</td>
+            </tr>
+        
+            <tr>
+                <td><strong>transaction.c</strong></td>
+                <td><span class="badge">C1: memory_unsafe</span></td>
+                <td>87</td>
+                <td>31</td>
+                <td>22</td>
+                <td>0</td>
+                <td>0</td>
+                <td>RISK_FLOAT_PRECISION, RISK_STRUCT_OFFSET</td>
+            </tr>
+        
+            <tr>
+                <td><strong>cipher.c</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>12</td>
+                <td>1</td>
+                <td>9</td>
+                <td>0</td>
+                <td>5</td>
+                <td>None</td>
+            </tr>
+        
+            <tr>
+                <td><strong>hash.c</strong></td>
+                <td><span class="badge">C2: legacy_crypto</span></td>
+                <td>32</td>
+                <td>3</td>
+                <td>17</td>
+                <td>0</td>
+                <td>23</td>
+                <td>RISK_QUANTUM_VULNERABLE</td>
+            </tr>
+        
+            <tr>
+                <td><strong>rsa.c</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>20</td>
+                <td>3</td>
+                <td>12</td>
+                <td>0</td>
+                <td>6</td>
+                <td>RISK_QUANTUM_VULNERABLE</td>
+            </tr>
+        
+            <tr>
+                <td><strong>buffer.c</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>38</td>
+                <td>6</td>
+                <td>15</td>
+                <td>2</td>
+                <td>0</td>
+                <td>RISK_MEMORY_LEAK, RISK_STRUCT_OFFSET</td>
+            </tr>
+        
+            <tr>
+                <td><strong>packet.h</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>20</td>
+                <td>1</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>RISK_STRUCT_OFFSET</td>
+            </tr>
+        
+            <tr>
+                <td><strong>pool.cpp</strong></td>
+                <td><span class="badge">C0: business_logic</span></td>
+                <td>27</td>
+                <td>2</td>
+                <td>6</td>
+                <td>1</td>
+                <td>0</td>
+                <td>RISK_MEMORY_LEAK</td>
+            </tr>
+        
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

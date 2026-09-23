@@ -40,7 +40,7 @@ def evaluate_file_risks(file_record: Dict[str, Any]) -> List[Dict[str, Any]]:
 
     # 2. RISK_MEMORY_LEAK (potential memory leak)
     alloc_count = features.get("dynamic_allocation_count", 0)
-    free_count = features.get("total_frees", 0)
+    free_count = features.get("free_count", 0)
     alloc_ratio = features.get("allocation_free_ratio", 0.0)
 
     if alloc_count > 0 and (alloc_count > free_count or alloc_ratio > 1.0):

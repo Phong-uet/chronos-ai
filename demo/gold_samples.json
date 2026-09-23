@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-09-20",
+  "track": "tech_risk = memory_unsafe",
+  "source_of_truth": [
+    "classification_manifest.json (categories -> tech/memory_unsafe)",
+    "demo/measure.py risk score, formula chronos-demo-risk-v2"
+  ],
+  "risk_formula_version": "chronos-demo-risk-v2",
+  "risk_formula_note": "Weighted 0-100 score. Components (weight): unpaired_allocations (0.20), manual_allocations (0.15), raw_pointer_count (0.18), pointer_arithmetic (0.12), void_pointers (0.08), cyclomatic (0.15), goto_count (0.05), legacy_crypto (0.04), precision_loss (0.03). Each component saturates as 100*(1-exp(-v/scale)). Identical formula must be used for the after-run - xem RISK_WEIGHTS trong demo/measure.py.",
+  "selection_criteria": [
+    "Nam trong tech/memory_unsafe cua classification_manifest.json",
+    "Risk score cao (theo demo/measure.py)",
+    "Kich thuoc vua du de IBM Bob modernize tron ven trong 48h (< ~1500 LOC/file)",
+    "malloc/calloc/realloc/free duoc goi TRUC TIEP, khong bi boc sau macro - de delta before/after do duoc chinh xac"
+  ],
+  "selected_count": 7,
+  "selected_total_loc": 3299,
+  "samples": [
+    {
+      "rank": 1,
+      "file": "clib-package.c",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/clib/src/common/clib-package.c",
+      "classified_path": "tech/memory_unsafe/clib-package.c",
+      "staged_before_path": "demo/samples/before/clib-package.c",
+      "risk_score": 48.69,
+      "metrics": {
+        "loc": 1342,
+        "cyclomatic_complexity": 325,
+        "raw_pointer_count": 444,
+        "pointer_arithmetic_count": 16,
+        "void_pointer_count": 9,
+        "alloc_count": 10,
+        "free_count": 49,
+        "goto_count": 59,
+        "function_count": 33
+      },
+      "reasons": [
+        "Risk score cao nhat trong nhom co kich thuoc kha thi cho 48h (48.69): 444 raw pointer tren 1342 LOC, cyclomatic 325.",
+        "Vong doi bo nho thu cong rat phan tan: 10 alloc nhung 49 free nam rai rac o nhieu nhanh cleanup khac nhau - dung mau loi 'free duong dan loi' kinh dien.",
+        "59 lenh goto tao thang error-handling; day chinh la thu Bob co the thay bang RAII/cleanup-function attribute, cho delta cyclomatic + goto rat de show tren slide."
+      ]
+    },
+    {
+      "rank": 2,
+      "file": "khmm.c",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/klib/khmm.c",
+      "classified_path": "tech/memory_unsafe/khmm.c",
+      "staged_before_path": "demo/samples/before/khmm.c",
+      "risk_score": 38.05,
+      "metrics": {
+        "loc": 360,
+        "cyclomatic_complexity": 102,
+        "raw_pointer_count": 314,
+        "pointer_arithmetic_count": 74,
+        "void_pointer_count": 0,
+        "alloc_count": 12,
+        "free_count": 42,
+        "goto_count": 0,
+        "function_count": 18
+      },
+      "reasons": [
+        "Mat do con tro tho cao nhat toan dataset: 314 raw pointer / 360 LOC (~0.87 con tro moi dong code).",
+        "Cap phat ma tran 2 chieu thu cong bang double** - malloc long nhau theo vong lap, va 42 loi goi free trong cac vong cleanup long nhau; chi can sot 1 nhanh la leak.",
+        "74 phep pointer arithmetic de index ma tran: Bob thay bang index 2D an toan se lam raw_pointer_count + pointer_arithmetic giam manh, rat truc quan cho bieu do."
+      ]
+    },
+    {
+      "rank": 3,
+      "file": "kopen.c",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/klib/kopen.c",
+      "classified_path": "tech/memory_unsafe/kopen.c",
+      "staged_before_path": "demo/samples/before/kopen.c",
+      "risk_score": 28.9,
+      "metrics": {
+        "loc": 313,
+        "cyclomatic_complexity": 88,
+        "raw_pointer_count": 149,
+        "pointer_arithmetic_count": 22,
+        "void_pointer_count": 2,
+        "alloc_count": 12,
+        "free_count": 11,
+        "goto_count": 3,
+        "function_count": 10
+      },
+      "reasons": [
+        "File DUY NHAT trong nhom co so alloc > so free o muc file (12 alloc vs 11 free) - tuc la co mot duong cap phat khong co doi free tuong ung, bang chung leak manh nhat de ke chuyen.",
+        "Xu ly buffer cap thap voi void* va 22 phep pointer arithmetic, cong them fd/process handling - dung kieu code ma memory-safety rewrite co gia tri that.",
+        "Chi 313 LOC / 10 ham nen Bob co the viet lai tron ven va van con thoi gian verify trong window 48h."
+      ]
+    },
+    {
+      "rank": 4,
+      "file": "clib-configure.c",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/clib/src/clib-configure.c",
+      "classified_path": "tech/memory_unsafe/clib-configure.c",
+      "staged_before_path": "demo/samples/before/clib-configure.c",
+      "risk_score": 25.48,
+      "metrics": {
+        "loc": 569,
+        "cyclomatic_complexity": 102,
+        "raw_pointer_count": 134,
+        "pointer_arithmetic_count": 14,
+        "void_pointer_count": 1,
+        "alloc_count": 5,
+        "free_count": 21,
+        "goto_count": 7,
+        "function_count": 13
+      },
+      "reasons": [
+        "Vong doi bo nho thu cong kem doc lenh: 5 alloc / 21 free tren 569 LOC, bo nho duoc cap o ham nay nhung giai phong o ham khac.",
+        "134 raw pointer + 7 goto trong logic parse/configure - chuoi C string thao tac tho, de tran bo dem.",
+        "Cung module clib voi rank 1 (clib-package.c): modernize ca hai cho phep demo 'Bob hieu ca module' thay vi tung file roi le."
+      ]
+    },
+    {
+      "rank": 5,
+      "file": "skpfa.c",
+      "dataset_path": "chronos-legacy-dataset/fortran_legacy/pfapack/original_source/c_interface/skpfa.c",
+      "classified_path": "tech/memory_unsafe/skpfa.c",
+      "staged_before_path": "demo/samples/before/skpfa.c",
+      "risk_score": 15.65,
+      "metrics": {
+        "loc": 247,
+        "cyclomatic_complexity": 59,
+        "raw_pointer_count": 66,
+        "pointer_arithmetic_count": 0,
+        "void_pointer_count": 0,
+        "alloc_count": 14,
+        "free_count": 18,
+        "goto_count": 0,
+        "function_count": 4
+      },
+      "reasons": [
+        "Mat do cap phat cao nhat theo LOC: 14 malloc trong chi 247 LOC / 4 ham - toan bo la workspace array cap phat thu cong cho lop C bao quanh Fortran (LAPACK/pfapack).",
+        "66 raw pointer duoc truyen thang xuong Fortran, khong co kiem tra bien nao - loi kinh dien cua interop C/Fortran legacy.",
+        "Nho va tu chua, nen day la 'clean win' de doan: Bob gan nhu chac chan rewrite thanh cong, dam bao demo co it nhat vai file xanh."
+      ]
+    },
+    {
+      "rank": 6,
+      "file": "skpf10.c",
+      "dataset_path": "chronos-legacy-dataset/fortran_legacy/pfapack/original_source/c_interface/skpf10.c",
+      "classified_path": "tech/memory_unsafe/skpf10.c",
+      "staged_before_path": "demo/samples/before/skpf10.c",
+      "risk_score": 15.45,
+      "metrics": {
+        "loc": 251,
+        "cyclomatic_complexity": 59,
+        "raw_pointer_count": 62,
+        "pointer_arithmetic_count": 0,
+        "void_pointer_count": 0,
+        "alloc_count": 14,
+        "free_count": 18,
+        "goto_count": 0,
+        "function_count": 4
+      },
+      "reasons": [
+        "Gan nhu song sinh voi skpfa.c (14 alloc / 18 free, 4 ham, 251 LOC) nhung khac phan xu ly mu 10 - tot de chung minh Bob ap dung BIEN DOI NHAT QUAN tren cac file anh em.",
+        "62 raw pointer cho workspace array cap phat/giai phong thu cong trong moi nhanh loi.",
+        "Neu skpfa.c va skpf10.c cho cung mot % giam, do la bang chung transformation on dinh chu khong phai may man."
+      ]
+    },
+    {
+      "rank": 7,
+      "file": "sktrd.c",
+      "dataset_path": "chronos-legacy-dataset/fortran_legacy/pfapack/original_source/c_interface/sktrd.c",
+      "classified_path": "tech/memory_unsafe/sktrd.c",
+      "staged_before_path": "demo/samples/before/sktrd.c",
+      "risk_score": 13.52,
+      "metrics": {
+        "loc": 217,
+        "cyclomatic_complexity": 53,
+        "raw_pointer_count": 60,
+        "pointer_arithmetic_count": 0,
+        "void_pointer_count": 0,
+        "alloc_count": 12,
+        "free_count": 12,
+        "goto_count": 0,
+        "function_count": 4
+      },
+      "reasons": [
+        "File nho nhat trong bo (217 LOC) voi 12 alloc / 12 free can bang o muc dem - dung lam SMOKE TEST cho Bob truoc khi chay cac file lon.",
+        "60 raw pointer cho matrix transform workspace; tuy can bang ve so dem, cac free nam trong nhanh loi rieng nen van co kha nang leak that.",
+        "Thoi gian modernize ngan nhat, nen day la file nen chay dau tien trong window 48h de validate pipeline before/after."
+      ]
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "file": "stb.h",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/stb/deprecated/stb.h",
+      "risk_score": 86.02,
+      "loc": 9877,
+      "exclusion_reason": "Risk score cao nhat toan dataset nhung 9877 LOC / 585 ham trong MOT header - khong kha thi de Bob modernize tron ven trong 48h, va neu chi lam mot phan thi so lieu before/after se khong so sanh duoc. Co the dung lam 'stretch goal' neu con thoi gian."
+    },
+    {
+      "file": "stb_image.h",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/stb/stb_image.h",
+      "risk_score": 55.09,
+      "loc": 5833,
+      "exclusion_reason": "5833 LOC qua lon cho window 48h. Quan trong hon: moi cap phat di qua macro STBI_MALLOC/STBI_FREE nen measure.py dem alloc_count = 0 va free_count = 0 - cot malloc/free trong bang so sanh se vo nghia."
+    },
+    {
+      "file": "sds.c",
+      "dataset_path": "chronos-legacy-dataset/c_financial_math/sds/sds.c",
+      "risk_score": 30.65,
+      "loc": 875,
+      "exclusion_reason": "Kich thuoc thi kha thi (875 LOC) nhung toan bo cap phat di qua macro s_malloc/s_realloc/s_free, nen measure.py bao cao alloc = free = 0. Delta malloc/free se khong do duoc. Neu muon dung file nay, phai mo rong analyzer/memory.py de nhan dien allocator wrapper truoc."
+    }
+  ],
+  "known_measurement_gap": "analyzer/memory.py chi dem loi goi TRUC TIEP malloc/calloc/realloc/free. Cac file boc allocator sau macro (STBI_MALLOC, s_malloc, ...) se bao cao alloc/free = 0. Tat ca 7 file da chon deu goi truc tiep nen khong bi anh huong."
+}

@@ -1,0 +1,607 @@
+{
+  "label": "before",
+  "input_dir": "D:\\chronos-ai\\demo\\samples\\before",
+  "generated_at": "2026-09-23 09:41:01",
+  "sources_only": true,
+  "risk_formula_version": "chronos-demo-risk-v2",
+  "risk_weights": {
+    "unpaired_allocations": {
+      "weight": 0.2,
+      "scale": 5.0
+    },
+    "manual_allocations": {
+      "weight": 0.15,
+      "scale": 40.0
+    },
+    "raw_pointer_count": {
+      "weight": 0.18,
+      "scale": 300.0
+    },
+    "pointer_arithmetic": {
+      "weight": 0.12,
+      "scale": 50.0
+    },
+    "void_pointers": {
+      "weight": 0.08,
+      "scale": 20.0
+    },
+    "cyclomatic": {
+      "weight": 0.15,
+      "scale": 200.0
+    },
+    "goto_count": {
+      "weight": 0.05,
+      "scale": 10.0
+    },
+    "legacy_crypto": {
+      "weight": 0.04,
+      "scale": 5.0
+    },
+    "precision_loss": {
+      "weight": 0.03,
+      "scale": 20.0
+    }
+  },
+  "totals": {
+    "loc": 3299,
+    "total_lines": 4464,
+    "cyclomatic_complexity": 788,
+    "raw_pointer_count": 1229,
+    "pointer_arithmetic_count": 126,
+    "void_pointer_count": 12,
+    "malloc_count": 79,
+    "free_count": 171,
+    "unpaired_allocations": 1,
+    "function_count": 86,
+    "goto_count": 69,
+    "file_count": 7,
+    "risk_score": 26.53
+  },
+  "files": [
+    {
+      "file": "clib-package.c",
+      "file_name": "clib-package.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\clib-package.c",
+      "parser_type": "tree_sitter",
+      "loc": 1342,
+      "total_lines": 1740,
+      "cyclomatic_complexity": 325,
+      "raw_pointer_count": 444,
+      "pointer_arithmetic_count": 16,
+      "void_pointer_count": 9,
+      "malloc_count": 10,
+      "free_count": 49,
+      "unpaired_allocations": 0,
+      "function_count": 33,
+      "goto_count": 59,
+      "risk_score": 48.69,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 59.0,
+          "subscore": 77.12,
+          "weight": 0.15,
+          "contribution": 11.57
+        },
+        "raw_pointer_count": {
+          "value": 444.0,
+          "subscore": 77.24,
+          "weight": 0.18,
+          "contribution": 13.9
+        },
+        "pointer_arithmetic": {
+          "value": 16.0,
+          "subscore": 27.39,
+          "weight": 0.12,
+          "contribution": 3.29
+        },
+        "void_pointers": {
+          "value": 9.0,
+          "subscore": 36.24,
+          "weight": 0.08,
+          "contribution": 2.9
+        },
+        "cyclomatic": {
+          "value": 325.0,
+          "subscore": 80.31,
+          "weight": 0.15,
+          "contribution": 12.05
+        },
+        "goto_count": {
+          "value": 59.0,
+          "subscore": 99.73,
+          "weight": 0.05,
+          "contribution": 4.99
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "khmm.c",
+      "file_name": "khmm.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\khmm.c",
+      "parser_type": "tree_sitter",
+      "loc": 360,
+      "total_lines": 423,
+      "cyclomatic_complexity": 102,
+      "raw_pointer_count": 314,
+      "pointer_arithmetic_count": 74,
+      "void_pointer_count": 0,
+      "malloc_count": 12,
+      "free_count": 42,
+      "unpaired_allocations": 0,
+      "function_count": 18,
+      "goto_count": 0,
+      "risk_score": 38.05,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 54.0,
+          "subscore": 74.08,
+          "weight": 0.15,
+          "contribution": 11.11
+        },
+        "raw_pointer_count": {
+          "value": 314.0,
+          "subscore": 64.89,
+          "weight": 0.18,
+          "contribution": 11.68
+        },
+        "pointer_arithmetic": {
+          "value": 74.0,
+          "subscore": 77.24,
+          "weight": 0.12,
+          "contribution": 9.27
+        },
+        "void_pointers": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.08,
+          "contribution": 0.0
+        },
+        "cyclomatic": {
+          "value": 102.0,
+          "subscore": 39.95,
+          "weight": 0.15,
+          "contribution": 5.99
+        },
+        "goto_count": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.05,
+          "contribution": 0.0
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "kopen.c",
+      "file_name": "kopen.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\kopen.c",
+      "parser_type": "tree_sitter",
+      "loc": 313,
+      "total_lines": 343,
+      "cyclomatic_complexity": 88,
+      "raw_pointer_count": 149,
+      "pointer_arithmetic_count": 22,
+      "void_pointer_count": 2,
+      "malloc_count": 12,
+      "free_count": 11,
+      "unpaired_allocations": 1,
+      "function_count": 10,
+      "goto_count": 3,
+      "risk_score": 28.9,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 1.0,
+          "subscore": 18.13,
+          "weight": 0.2,
+          "contribution": 3.63
+        },
+        "manual_allocations": {
+          "value": 23.0,
+          "subscore": 43.73,
+          "weight": 0.15,
+          "contribution": 6.56
+        },
+        "raw_pointer_count": {
+          "value": 149.0,
+          "subscore": 39.14,
+          "weight": 0.18,
+          "contribution": 7.05
+        },
+        "pointer_arithmetic": {
+          "value": 22.0,
+          "subscore": 35.6,
+          "weight": 0.12,
+          "contribution": 4.27
+        },
+        "void_pointers": {
+          "value": 2.0,
+          "subscore": 9.52,
+          "weight": 0.08,
+          "contribution": 0.76
+        },
+        "cyclomatic": {
+          "value": 88.0,
+          "subscore": 35.6,
+          "weight": 0.15,
+          "contribution": 5.34
+        },
+        "goto_count": {
+          "value": 3.0,
+          "subscore": 25.92,
+          "weight": 0.05,
+          "contribution": 1.3
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "clib-configure.c",
+      "file_name": "clib-configure.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\clib-configure.c",
+      "parser_type": "tree_sitter",
+      "loc": 569,
+      "total_lines": 705,
+      "cyclomatic_complexity": 102,
+      "raw_pointer_count": 134,
+      "pointer_arithmetic_count": 14,
+      "void_pointer_count": 1,
+      "malloc_count": 5,
+      "free_count": 21,
+      "unpaired_allocations": 0,
+      "function_count": 13,
+      "goto_count": 7,
+      "risk_score": 25.48,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 26.0,
+          "subscore": 47.8,
+          "weight": 0.15,
+          "contribution": 7.17
+        },
+        "raw_pointer_count": {
+          "value": 134.0,
+          "subscore": 36.02,
+          "weight": 0.18,
+          "contribution": 6.48
+        },
+        "pointer_arithmetic": {
+          "value": 14.0,
+          "subscore": 24.42,
+          "weight": 0.12,
+          "contribution": 2.93
+        },
+        "void_pointers": {
+          "value": 1.0,
+          "subscore": 4.88,
+          "weight": 0.08,
+          "contribution": 0.39
+        },
+        "cyclomatic": {
+          "value": 102.0,
+          "subscore": 39.95,
+          "weight": 0.15,
+          "contribution": 5.99
+        },
+        "goto_count": {
+          "value": 7.0,
+          "subscore": 50.34,
+          "weight": 0.05,
+          "contribution": 2.52
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "skpfa/skpfa.c",
+      "file_name": "skpfa.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\skpfa\\skpfa.c",
+      "parser_type": "tree_sitter",
+      "loc": 247,
+      "total_lines": 385,
+      "cyclomatic_complexity": 59,
+      "raw_pointer_count": 66,
+      "pointer_arithmetic_count": 0,
+      "void_pointer_count": 0,
+      "malloc_count": 14,
+      "free_count": 18,
+      "unpaired_allocations": 0,
+      "function_count": 4,
+      "goto_count": 0,
+      "risk_score": 15.65,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 32.0,
+          "subscore": 55.07,
+          "weight": 0.15,
+          "contribution": 8.26
+        },
+        "raw_pointer_count": {
+          "value": 66.0,
+          "subscore": 19.75,
+          "weight": 0.18,
+          "contribution": 3.55
+        },
+        "pointer_arithmetic": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.12,
+          "contribution": 0.0
+        },
+        "void_pointers": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.08,
+          "contribution": 0.0
+        },
+        "cyclomatic": {
+          "value": 59.0,
+          "subscore": 25.55,
+          "weight": 0.15,
+          "contribution": 3.83
+        },
+        "goto_count": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.05,
+          "contribution": 0.0
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "skpf10/skpf10.c",
+      "file_name": "skpf10.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\skpf10\\skpf10.c",
+      "parser_type": "tree_sitter",
+      "loc": 251,
+      "total_lines": 393,
+      "cyclomatic_complexity": 59,
+      "raw_pointer_count": 62,
+      "pointer_arithmetic_count": 0,
+      "void_pointer_count": 0,
+      "malloc_count": 14,
+      "free_count": 18,
+      "unpaired_allocations": 0,
+      "function_count": 4,
+      "goto_count": 0,
+      "risk_score": 15.45,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 32.0,
+          "subscore": 55.07,
+          "weight": 0.15,
+          "contribution": 8.26
+        },
+        "raw_pointer_count": {
+          "value": 62.0,
+          "subscore": 18.67,
+          "weight": 0.18,
+          "contribution": 3.36
+        },
+        "pointer_arithmetic": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.12,
+          "contribution": 0.0
+        },
+        "void_pointers": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.08,
+          "contribution": 0.0
+        },
+        "cyclomatic": {
+          "value": 59.0,
+          "subscore": 25.55,
+          "weight": 0.15,
+          "contribution": 3.83
+        },
+        "goto_count": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.05,
+          "contribution": 0.0
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    },
+    {
+      "file": "sktrd/sktrd.c",
+      "file_name": "sktrd.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\sktrd\\sktrd.c",
+      "parser_type": "tree_sitter",
+      "loc": 217,
+      "total_lines": 475,
+      "cyclomatic_complexity": 53,
+      "raw_pointer_count": 60,
+      "pointer_arithmetic_count": 0,
+      "void_pointer_count": 0,
+      "malloc_count": 12,
+      "free_count": 12,
+      "unpaired_allocations": 0,
+      "function_count": 4,
+      "goto_count": 0,
+      "risk_score": 13.52,
+      "risk_breakdown": {
+        "unpaired_allocations": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.2,
+          "contribution": 0.0
+        },
+        "manual_allocations": {
+          "value": 24.0,
+          "subscore": 45.12,
+          "weight": 0.15,
+          "contribution": 6.77
+        },
+        "raw_pointer_count": {
+          "value": 60.0,
+          "subscore": 18.13,
+          "weight": 0.18,
+          "contribution": 3.26
+        },
+        "pointer_arithmetic": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.12,
+          "contribution": 0.0
+        },
+        "void_pointers": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.08,
+          "contribution": 0.0
+        },
+        "cyclomatic": {
+          "value": 53.0,
+          "subscore": 23.28,
+          "weight": 0.15,
+          "contribution": 3.49
+        },
+        "goto_count": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.05,
+          "contribution": 0.0
+        },
+        "legacy_crypto": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.04,
+          "contribution": 0.0
+        },
+        "precision_loss": {
+          "value": 0.0,
+          "subscore": 0.0,
+          "weight": 0.03,
+          "contribution": 0.0
+        }
+      }
+    }
+  ],
+  "problems": [
+    {
+      "file": "clib-configure.c",
+      "stage": "parse",
+      "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
+    },
+    {
+      "file": "clib-package.c",
+      "stage": "parse",
+      "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
+    },
+    {
+      "file": "skpf10/skpf10.c",
+      "stage": "parse",
+      "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
+    },
+    {
+      "file": "skpfa/skpfa.c",
+      "stage": "parse",
+      "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
+    },
+    {
+      "file": "sktrd/sktrd.c",
+      "stage": "parse",
+      "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
+    }
+  ]
+}
