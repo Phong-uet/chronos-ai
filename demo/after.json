@@ -1,6 +1,6 @@
 {
-  "label": "before",
-  "input_dir": "D:\\chronos-ai\\demo\\samples\\before",
+  "label": "after",
+  "input_dir": "D:\\chronos-ai\\demo\\samples\\after",
   "generated_at": "2026-09-26 09:35:50",
   "sources_only": true,
   "risk_formula_version": "chronos-demo-risk-v3",
@@ -52,43 +52,43 @@
     "size_factor": 0.4
   },
   "totals": {
-    "loc": 3299,
-    "total_lines": 4464,
-    "cyclomatic_complexity": 788,
-    "raw_pointer_count": 1229,
-    "pointer_arithmetic_count": 126,
+    "loc": 3489,
+    "total_lines": 4695,
+    "cyclomatic_complexity": 893,
+    "raw_pointer_count": 1290,
+    "pointer_arithmetic_count": 142,
     "void_pointer_count": 12,
     "malloc_count": 79,
-    "free_count": 171,
-    "unpaired_allocations": 1,
+    "free_count": 242,
+    "unpaired_allocations": 0,
     "function_count": 86,
-    "goto_count": 69,
-    "unguarded_allocations": 30,
+    "goto_count": 77,
+    "unguarded_allocations": 0,
     "unattributable_allocations": 0,
     "file_count": 7,
-    "risk_score": 26.53,
-    "likelihood_score": 33.5,
-    "impact_score": 76.9,
-    "risk_score_v3": 25.72
+    "risk_score": 27.99,
+    "likelihood_score": 5.0,
+    "impact_score": 77.88,
+    "risk_score_v3": 3.89
   },
   "files": [
     {
-      "file": "clib-package.c",
+      "file": "clib/clib-package.c",
       "file_name": "clib-package.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\clib-package.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\clib\\clib-package.c",
       "parser_type": "tree_sitter",
-      "loc": 1342,
-      "total_lines": 1740,
-      "cyclomatic_complexity": 325,
+      "loc": 1360,
+      "total_lines": 1763,
+      "cyclomatic_complexity": 331,
       "raw_pointer_count": 444,
-      "pointer_arithmetic_count": 16,
+      "pointer_arithmetic_count": 17,
       "void_pointer_count": 9,
       "malloc_count": 10,
-      "free_count": 49,
+      "free_count": 53,
       "unpaired_allocations": 0,
-      "unguarded_allocations": 1,
+      "unguarded_allocations": 0,
       "unattributable_allocations": 0,
-      "guarded_allocation_ratio": 0.9,
+      "guarded_allocation_ratio": 1.0,
       "allocation_guard_sites": [
         {
           "line": 213,
@@ -140,30 +140,30 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 1028,
+          "line": 1038,
           "type": "malloc",
           "var": "status",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 1049,
+          "line": 1063,
           "type": "malloc",
           "var": "fetch",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 1356,
+          "line": 1375,
           "type": "malloc",
           "var": "fetchs",
           "status": "guarded",
-          "guard_style": "positive_wrap"
+          "guard_style": "negative_check"
         }
       ],
       "function_count": 33,
-      "goto_count": 59,
-      "risk_score": 48.69,
+      "goto_count": 61,
+      "risk_score": 49.28,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -172,10 +172,10 @@
           "contribution": 0.0
         },
         "manual_allocations": {
-          "value": 59.0,
-          "subscore": 77.12,
+          "value": 63.0,
+          "subscore": 79.3,
           "weight": 0.15,
-          "contribution": 11.57
+          "contribution": 11.89
         },
         "raw_pointer_count": {
           "value": 444.0,
@@ -184,10 +184,10 @@
           "contribution": 13.9
         },
         "pointer_arithmetic": {
-          "value": 16.0,
-          "subscore": 27.39,
+          "value": 17.0,
+          "subscore": 28.82,
           "weight": 0.12,
-          "contribution": 3.29
+          "contribution": 3.46
         },
         "void_pointers": {
           "value": 9.0,
@@ -196,14 +196,14 @@
           "contribution": 2.9
         },
         "cyclomatic": {
-          "value": 325.0,
-          "subscore": 80.31,
+          "value": 331.0,
+          "subscore": 80.89,
           "weight": 0.15,
-          "contribution": 12.05
+          "contribution": 12.13
         },
         "goto_count": {
-          "value": 59.0,
-          "subscore": 99.73,
+          "value": 61.0,
+          "subscore": 99.78,
           "weight": 0.05,
           "contribution": 4.99
         },
@@ -220,18 +220,18 @@
           "contribution": 0.0
         }
       },
-      "likelihood_score": 7.0,
+      "likelihood_score": 5.0,
       "impact_score": 100.0,
-      "risk_score_v3": 7.0,
+      "risk_score_v3": 5.0,
       "risk_breakdown_v3": {
         "likelihood": {
-          "score": 7.0,
-          "measured_score": 7.0,
+          "score": 5.0,
+          "measured_score": 0.0,
           "floor": 5.0,
-          "floored": false,
-          "unguarded_allocation_ratio": 0.1,
+          "floored": true,
+          "unguarded_allocation_ratio": 0.0,
           "unpaired_ratio": 0.0,
-          "unguarded_allocations": 1,
+          "unguarded_allocations": 0,
           "unpaired_allocations": 0,
           "alloc_total": 10,
           "weights": {
@@ -241,11 +241,11 @@
         },
         "impact": {
           "score": 100.0,
-          "raw_pointer_density": 0.3308,
+          "raw_pointer_density": 0.3265,
           "raw_pointer_density_term": 1.0,
           "size_factor": 1.0,
           "raw_pointer_count": 444,
-          "loc": 1342,
+          "loc": 1360,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -254,111 +254,111 @@
       }
     },
     {
-      "file": "khmm.c",
+      "file": "khmm/khmm.c",
       "file_name": "khmm.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\khmm.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\khmm\\khmm.c",
       "parser_type": "tree_sitter",
-      "loc": 360,
-      "total_lines": 423,
-      "cyclomatic_complexity": 102,
-      "raw_pointer_count": 314,
-      "pointer_arithmetic_count": 74,
+      "loc": 420,
+      "total_lines": 483,
+      "cyclomatic_complexity": 142,
+      "raw_pointer_count": 370,
+      "pointer_arithmetic_count": 89,
       "void_pointer_count": 0,
       "malloc_count": 12,
-      "free_count": 42,
+      "free_count": 93,
       "unpaired_allocations": 0,
-      "unguarded_allocations": 12,
+      "unguarded_allocations": 0,
       "unattributable_allocations": 0,
-      "guarded_allocation_ratio": 0.0,
+      "guarded_allocation_ratio": 1.0,
       "allocation_guard_sites": [
         {
           "line": 15,
           "type": "calloc",
           "var": "hp",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 17,
+          "line": 18,
           "type": "calloc",
           "var": "hp->a0",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 40,
+          "line": 53,
           "type": "calloc",
           "var": "hd",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 42,
+          "line": 56,
           "type": "malloc",
           "var": "hd->seq",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 64,
+          "line": 80,
           "type": "calloc",
           "var": "he",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 66,
+          "line": 83,
           "type": "calloc",
           "var": "he->A0",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 90,
+          "line": 113,
           "type": "calloc",
           "var": "hd->v",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 94,
+          "line": 128,
           "type": "malloc",
           "var": "preV",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 95,
+          "line": 135,
           "type": "malloc",
           "var": "curV",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 159,
+          "line": 206,
           "type": "calloc",
           "var": "hd->s",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 269,
+          "line": 325,
           "type": "calloc",
           "var": "hd->p",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 391,
+          "line": 449,
           "type": "calloc",
           "var": "seq",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         }
       ],
       "function_count": 18,
       "goto_count": 0,
-      "risk_score": 38.05,
+      "risk_score": 44.27,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -367,22 +367,22 @@
           "contribution": 0.0
         },
         "manual_allocations": {
-          "value": 54.0,
-          "subscore": 74.08,
+          "value": 105.0,
+          "subscore": 92.76,
           "weight": 0.15,
-          "contribution": 11.11
+          "contribution": 13.91
         },
         "raw_pointer_count": {
-          "value": 314.0,
-          "subscore": 64.89,
+          "value": 370.0,
+          "subscore": 70.87,
           "weight": 0.18,
-          "contribution": 11.68
+          "contribution": 12.76
         },
         "pointer_arithmetic": {
-          "value": 74.0,
-          "subscore": 77.24,
+          "value": 89.0,
+          "subscore": 83.14,
           "weight": 0.12,
-          "contribution": 9.27
+          "contribution": 9.98
         },
         "void_pointers": {
           "value": 0.0,
@@ -391,10 +391,10 @@
           "contribution": 0.0
         },
         "cyclomatic": {
-          "value": 102.0,
-          "subscore": 39.95,
+          "value": 142.0,
+          "subscore": 50.84,
           "weight": 0.15,
-          "contribution": 5.99
+          "contribution": 7.63
         },
         "goto_count": {
           "value": 0.0,
@@ -415,18 +415,18 @@
           "contribution": 0.0
         }
       },
-      "likelihood_score": 70.0,
-      "impact_score": 74.4,
-      "risk_score_v3": 52.08,
+      "likelihood_score": 5.0,
+      "impact_score": 76.8,
+      "risk_score_v3": 3.84,
       "risk_breakdown_v3": {
         "likelihood": {
-          "score": 70.0,
-          "measured_score": 70.0,
+          "score": 5.0,
+          "measured_score": 0.0,
           "floor": 5.0,
-          "floored": false,
-          "unguarded_allocation_ratio": 1.0,
+          "floored": true,
+          "unguarded_allocation_ratio": 0.0,
           "unpaired_ratio": 0.0,
-          "unguarded_allocations": 12,
+          "unguarded_allocations": 0,
           "unpaired_allocations": 0,
           "alloc_total": 12,
           "weights": {
@@ -435,12 +435,12 @@
           }
         },
         "impact": {
-          "score": 74.4,
-          "raw_pointer_density": 0.8722,
+          "score": 76.8,
+          "raw_pointer_density": 0.881,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.36,
-          "raw_pointer_count": 314,
-          "loc": 360,
+          "size_factor": 0.42,
+          "raw_pointer_count": 370,
+          "loc": 420,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -449,129 +449,129 @@
       }
     },
     {
-      "file": "kopen.c",
+      "file": "kopen/kopen.c",
       "file_name": "kopen.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\kopen.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\kopen\\kopen.c",
       "parser_type": "tree_sitter",
-      "loc": 313,
-      "total_lines": 343,
-      "cyclomatic_complexity": 88,
-      "raw_pointer_count": 149,
+      "loc": 343,
+      "total_lines": 373,
+      "cyclomatic_complexity": 108,
+      "raw_pointer_count": 151,
       "pointer_arithmetic_count": 22,
       "void_pointer_count": 2,
       "malloc_count": 12,
-      "free_count": 11,
-      "unpaired_allocations": 1,
-      "unguarded_allocations": 12,
+      "free_count": 27,
+      "unpaired_allocations": 0,
+      "unguarded_allocations": 0,
       "unattributable_allocations": 0,
-      "guarded_allocation_ratio": 0.0,
+      "guarded_allocation_ratio": 1.0,
       "allocation_guard_sites": [
         {
           "line": 66,
           "type": "calloc",
           "var": "http_host",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 89,
+          "line": 98,
           "type": "calloc",
           "var": "buf",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 127,
+          "line": 142,
           "type": "realloc",
-          "var": "aux->response",
-          "status": "unguarded",
-          "guard_style": "none"
+          "var": "new_response",
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 162,
+          "line": 181,
           "type": "calloc",
           "var": "host",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 164,
+          "line": 184,
           "type": "calloc",
           "var": "retr",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 216,
+          "line": 237,
           "type": "calloc",
           "var": "argv",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 217,
+          "line": 239,
           "type": "calloc",
           "var": "str",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 241,
+          "line": 264,
           "type": "calloc",
           "var": "aux",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 245,
+          "line": 269,
           "type": "calloc",
           "var": "aux",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 249,
+          "line": 274,
           "type": "calloc",
           "var": "aux",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 283,
+          "line": 309,
           "type": "calloc",
           "var": "aux",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 295,
+          "line": 322,
           "type": "calloc",
           "var": "aux",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         }
       ],
       "function_count": 10,
       "goto_count": 3,
-      "risk_score": 28.9,
+      "risk_score": 29.05,
       "risk_breakdown": {
         "unpaired_allocations": {
-          "value": 1.0,
-          "subscore": 18.13,
+          "value": 0.0,
+          "subscore": 0.0,
           "weight": 0.2,
-          "contribution": 3.63
+          "contribution": 0.0
         },
         "manual_allocations": {
-          "value": 23.0,
-          "subscore": 43.73,
+          "value": 39.0,
+          "subscore": 62.28,
           "weight": 0.15,
-          "contribution": 6.56
+          "contribution": 9.34
         },
         "raw_pointer_count": {
-          "value": 149.0,
-          "subscore": 39.14,
+          "value": 151.0,
+          "subscore": 39.55,
           "weight": 0.18,
-          "contribution": 7.05
+          "contribution": 7.12
         },
         "pointer_arithmetic": {
           "value": 22.0,
@@ -586,10 +586,10 @@
           "contribution": 0.76
         },
         "cyclomatic": {
-          "value": 88.0,
-          "subscore": 35.6,
+          "value": 108.0,
+          "subscore": 41.73,
           "weight": 0.15,
-          "contribution": 5.34
+          "contribution": 6.26
         },
         "goto_count": {
           "value": 3.0,
@@ -610,19 +610,19 @@
           "contribution": 0.0
         }
       },
-      "likelihood_score": 72.5,
-      "impact_score": 72.52,
-      "risk_score_v3": 52.58,
+      "likelihood_score": 5.0,
+      "impact_score": 73.72,
+      "risk_score_v3": 3.69,
       "risk_breakdown_v3": {
         "likelihood": {
-          "score": 72.5,
-          "measured_score": 72.5,
+          "score": 5.0,
+          "measured_score": 0.0,
           "floor": 5.0,
-          "floored": false,
-          "unguarded_allocation_ratio": 1.0,
-          "unpaired_ratio": 0.0833,
-          "unguarded_allocations": 12,
-          "unpaired_allocations": 1,
+          "floored": true,
+          "unguarded_allocation_ratio": 0.0,
+          "unpaired_ratio": 0.0,
+          "unguarded_allocations": 0,
+          "unpaired_allocations": 0,
           "alloc_total": 12,
           "weights": {
             "unguarded_allocation_ratio": 0.7,
@@ -630,12 +630,12 @@
           }
         },
         "impact": {
-          "score": 72.52,
-          "raw_pointer_density": 0.476,
+          "score": 73.72,
+          "raw_pointer_density": 0.4402,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.313,
-          "raw_pointer_count": 149,
-          "loc": 313,
+          "size_factor": 0.343,
+          "raw_pointer_count": 151,
+          "loc": 343,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -644,62 +644,62 @@
       }
     },
     {
-      "file": "clib-configure.c",
+      "file": "clib/clib-configure.c",
       "file_name": "clib-configure.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\clib-configure.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\clib\\clib-configure.c",
       "parser_type": "tree_sitter",
-      "loc": 569,
-      "total_lines": 705,
-      "cyclomatic_complexity": 102,
-      "raw_pointer_count": 134,
+      "loc": 607,
+      "total_lines": 751,
+      "cyclomatic_complexity": 117,
+      "raw_pointer_count": 137,
       "pointer_arithmetic_count": 14,
       "void_pointer_count": 1,
       "malloc_count": 5,
       "free_count": 21,
       "unpaired_allocations": 0,
-      "unguarded_allocations": 5,
+      "unguarded_allocations": 0,
       "unattributable_allocations": 0,
-      "guarded_allocation_ratio": 0.0,
+      "guarded_allocation_ratio": 1.0,
       "allocation_guard_sites": [
         {
           "line": 160,
           "type": "malloc",
           "var": "root_package->prefix",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 234,
+          "line": 241,
           "type": "malloc",
           "var": "package->prefix",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 558,
+          "line": 595,
           "type": "malloc",
           "var": "opts.dir",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 568,
+          "line": 608,
           "type": "malloc",
           "var": "opts.prefix",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         },
         {
-          "line": 590,
+          "line": 633,
           "type": "malloc",
           "var": "rest_argv",
-          "status": "unguarded",
-          "guard_style": "none"
+          "status": "guarded",
+          "guard_style": "negative_check"
         }
       ],
       "function_count": 13,
-      "goto_count": 7,
-      "risk_score": 25.48,
+      "goto_count": 13,
+      "risk_score": 27.37,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -714,10 +714,10 @@
           "contribution": 7.17
         },
         "raw_pointer_count": {
-          "value": 134.0,
-          "subscore": 36.02,
+          "value": 137.0,
+          "subscore": 36.66,
           "weight": 0.18,
-          "contribution": 6.48
+          "contribution": 6.6
         },
         "pointer_arithmetic": {
           "value": 14.0,
@@ -732,16 +732,16 @@
           "contribution": 0.39
         },
         "cyclomatic": {
-          "value": 102.0,
-          "subscore": 39.95,
+          "value": 117.0,
+          "subscore": 44.29,
           "weight": 0.15,
-          "contribution": 5.99
+          "contribution": 6.64
         },
         "goto_count": {
-          "value": 7.0,
-          "subscore": 50.34,
+          "value": 13.0,
+          "subscore": 72.75,
           "weight": 0.05,
-          "contribution": 2.52
+          "contribution": 3.64
         },
         "legacy_crypto": {
           "value": 0.0,
@@ -756,18 +756,18 @@
           "contribution": 0.0
         }
       },
-      "likelihood_score": 70.0,
-      "impact_score": 82.76,
-      "risk_score_v3": 57.93,
+      "likelihood_score": 5.0,
+      "impact_score": 84.28,
+      "risk_score_v3": 4.21,
       "risk_breakdown_v3": {
         "likelihood": {
-          "score": 70.0,
-          "measured_score": 70.0,
+          "score": 5.0,
+          "measured_score": 0.0,
           "floor": 5.0,
-          "floored": false,
-          "unguarded_allocation_ratio": 1.0,
+          "floored": true,
+          "unguarded_allocation_ratio": 0.0,
           "unpaired_ratio": 0.0,
-          "unguarded_allocations": 5,
+          "unguarded_allocations": 0,
           "unpaired_allocations": 0,
           "alloc_total": 5,
           "weights": {
@@ -776,12 +776,12 @@
           }
         },
         "impact": {
-          "score": 82.76,
-          "raw_pointer_density": 0.2355,
+          "score": 84.28,
+          "raw_pointer_density": 0.2257,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.569,
-          "raw_pointer_count": 134,
-          "loc": 569,
+          "size_factor": 0.607,
+          "raw_pointer_count": 137,
+          "loc": 607,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -792,11 +792,11 @@
     {
       "file": "skpfa/skpfa.c",
       "file_name": "skpfa.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\skpfa\\skpfa.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\skpfa\\skpfa.c",
       "parser_type": "tree_sitter",
-      "loc": 247,
-      "total_lines": 385,
-      "cyclomatic_complexity": 59,
+      "loc": 263,
+      "total_lines": 411,
+      "cyclomatic_complexity": 69,
       "raw_pointer_count": 66,
       "pointer_arithmetic_count": 0,
       "void_pointer_count": 0,
@@ -815,13 +815,6 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 123,
-          "type": "malloc",
-          "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
           "line": 129,
           "type": "malloc",
           "var": "work",
@@ -829,77 +822,84 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 181,
-          "type": "malloc",
-          "var": "iwork",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 195,
+          "line": 135,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 201,
-          "type": "malloc",
-          "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 254,
+          "line": 187,
           "type": "malloc",
           "var": "iwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 258,
+          "line": 207,
+          "type": "malloc",
+          "var": "work",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 213,
+          "type": "malloc",
+          "var": "work",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 266,
+          "type": "malloc",
+          "var": "iwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 271,
           "type": "malloc",
           "var": "rwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 273,
+          "line": 292,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 279,
+          "line": 298,
           "type": "malloc",
           "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 334,
-          "type": "malloc",
-          "var": "iwork",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 338,
-          "type": "malloc",
-          "var": "rwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
           "line": 353,
           "type": "malloc",
+          "var": "iwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 358,
+          "type": "malloc",
+          "var": "rwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 379,
+          "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 359,
+          "line": 385,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
@@ -908,7 +908,7 @@
       ],
       "function_count": 4,
       "goto_count": 0,
-      "risk_score": 15.65,
+      "risk_score": 16.19,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -941,10 +941,10 @@
           "contribution": 0.0
         },
         "cyclomatic": {
-          "value": 59.0,
-          "subscore": 25.55,
+          "value": 69.0,
+          "subscore": 29.18,
           "weight": 0.15,
-          "contribution": 3.83
+          "contribution": 4.38
         },
         "goto_count": {
           "value": 0.0,
@@ -966,8 +966,8 @@
         }
       },
       "likelihood_score": 5.0,
-      "impact_score": 69.88,
-      "risk_score_v3": 3.49,
+      "impact_score": 70.52,
+      "risk_score_v3": 3.53,
       "risk_breakdown_v3": {
         "likelihood": {
           "score": 5.0,
@@ -985,12 +985,12 @@
           }
         },
         "impact": {
-          "score": 69.88,
-          "raw_pointer_density": 0.2672,
+          "score": 70.52,
+          "raw_pointer_density": 0.251,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.247,
+          "size_factor": 0.263,
           "raw_pointer_count": 66,
-          "loc": 247,
+          "loc": 263,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -1001,11 +1001,11 @@
     {
       "file": "skpf10/skpf10.c",
       "file_name": "skpf10.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\skpf10\\skpf10.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\skpf10\\skpf10.c",
       "parser_type": "tree_sitter",
-      "loc": 251,
-      "total_lines": 393,
-      "cyclomatic_complexity": 59,
+      "loc": 267,
+      "total_lines": 419,
+      "cyclomatic_complexity": 69,
       "raw_pointer_count": 62,
       "pointer_arithmetic_count": 0,
       "void_pointer_count": 0,
@@ -1024,13 +1024,6 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 127,
-          "type": "malloc",
-          "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
           "line": 133,
           "type": "malloc",
           "var": "work",
@@ -1038,77 +1031,84 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 186,
-          "type": "malloc",
-          "var": "iwork",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 200,
+          "line": 139,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 206,
-          "type": "malloc",
-          "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 260,
+          "line": 192,
           "type": "malloc",
           "var": "iwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 264,
+          "line": 212,
+          "type": "malloc",
+          "var": "work",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 218,
+          "type": "malloc",
+          "var": "work",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 272,
+          "type": "malloc",
+          "var": "iwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 277,
           "type": "malloc",
           "var": "rwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 279,
+          "line": 298,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 285,
+          "line": 304,
           "type": "malloc",
           "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 341,
-          "type": "malloc",
-          "var": "iwork",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
-          "line": 345,
-          "type": "malloc",
-          "var": "rwork",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
           "line": 360,
           "type": "malloc",
+          "var": "iwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 365,
+          "type": "malloc",
+          "var": "rwork",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 386,
+          "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 366,
+          "line": 392,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
@@ -1117,7 +1117,7 @@
       ],
       "function_count": 4,
       "goto_count": 0,
-      "risk_score": 15.45,
+      "risk_score": 16.0,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -1150,10 +1150,10 @@
           "contribution": 0.0
         },
         "cyclomatic": {
-          "value": 59.0,
-          "subscore": 25.55,
+          "value": 69.0,
+          "subscore": 29.18,
           "weight": 0.15,
-          "contribution": 3.83
+          "contribution": 4.38
         },
         "goto_count": {
           "value": 0.0,
@@ -1175,8 +1175,8 @@
         }
       },
       "likelihood_score": 5.0,
-      "impact_score": 70.04,
-      "risk_score_v3": 3.5,
+      "impact_score": 70.68,
+      "risk_score_v3": 3.53,
       "risk_breakdown_v3": {
         "likelihood": {
           "score": 5.0,
@@ -1194,12 +1194,12 @@
           }
         },
         "impact": {
-          "score": 70.04,
-          "raw_pointer_density": 0.247,
+          "score": 70.68,
+          "raw_pointer_density": 0.2322,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.251,
+          "size_factor": 0.267,
           "raw_pointer_count": 62,
-          "loc": 251,
+          "loc": 267,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -1210,11 +1210,11 @@
     {
       "file": "sktrd/sktrd.c",
       "file_name": "sktrd.c",
-      "abs_path": "D:\\chronos-ai\\demo\\samples\\before\\sktrd\\sktrd.c",
+      "abs_path": "D:\\chronos-ai\\demo\\samples\\after\\sktrd\\sktrd.c",
       "parser_type": "tree_sitter",
-      "loc": 217,
-      "total_lines": 475,
-      "cyclomatic_complexity": 53,
+      "loc": 229,
+      "total_lines": 495,
+      "cyclomatic_complexity": 57,
       "raw_pointer_count": 60,
       "pointer_arithmetic_count": 0,
       "void_pointer_count": 0,
@@ -1233,13 +1233,6 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 243,
-          "type": "malloc",
-          "var": "work",
-          "status": "guarded",
-          "guard_style": "negative_check"
-        },
-        {
           "line": 248,
           "type": "malloc",
           "var": "work",
@@ -1247,63 +1240,70 @@
           "guard_style": "negative_check"
         },
         {
-          "line": 297,
+          "line": 253,
+          "type": "malloc",
+          "var": "work",
+          "status": "guarded",
+          "guard_style": "negative_check"
+        },
+        {
+          "line": 302,
           "type": "malloc",
           "var": "e",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 311,
+          "line": 321,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 316,
+          "line": 326,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 366,
+          "line": 376,
           "type": "malloc",
           "var": "e",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 380,
+          "line": 395,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 385,
+          "line": 400,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 435,
+          "line": 450,
           "type": "malloc",
           "var": "e",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 449,
+          "line": 469,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
           "guard_style": "negative_check"
         },
         {
-          "line": 454,
+          "line": 474,
           "type": "malloc",
           "var": "work",
           "status": "guarded",
@@ -1312,7 +1312,7 @@
       ],
       "function_count": 4,
       "goto_count": 0,
-      "risk_score": 13.52,
+      "risk_score": 13.75,
       "risk_breakdown": {
         "unpaired_allocations": {
           "value": 0.0,
@@ -1345,10 +1345,10 @@
           "contribution": 0.0
         },
         "cyclomatic": {
-          "value": 53.0,
-          "subscore": 23.28,
+          "value": 57.0,
+          "subscore": 24.8,
           "weight": 0.15,
-          "contribution": 3.49
+          "contribution": 3.72
         },
         "goto_count": {
           "value": 0.0,
@@ -1370,8 +1370,8 @@
         }
       },
       "likelihood_score": 5.0,
-      "impact_score": 68.68,
-      "risk_score_v3": 3.43,
+      "impact_score": 69.16,
+      "risk_score_v3": 3.46,
       "risk_breakdown_v3": {
         "likelihood": {
           "score": 5.0,
@@ -1389,12 +1389,12 @@
           }
         },
         "impact": {
-          "score": 68.68,
-          "raw_pointer_density": 0.2765,
+          "score": 69.16,
+          "raw_pointer_density": 0.262,
           "raw_pointer_density_term": 1.0,
-          "size_factor": 0.217,
+          "size_factor": 0.229,
           "raw_pointer_count": 60,
-          "loc": 217,
+          "loc": 229,
           "weights": {
             "raw_pointer_density": 0.6,
             "size_factor": 0.4
@@ -1405,12 +1405,12 @@
   ],
   "problems": [
     {
-      "file": "clib-configure.c",
+      "file": "clib/clib-configure.c",
       "stage": "parse",
       "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
     },
     {
-      "file": "clib-package.c",
+      "file": "clib/clib-package.c",
       "stage": "parse",
       "error": "Tree contains syntax errors (recovered via Tree-sitter error nodes)"
     },

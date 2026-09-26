@@ -51,3 +51,4 @@ python demo/compare.py --before demo/before.json --after demo/after.json \
 
 **Risk formula phai giu nguyen giua before/after** (`RISK_FORMULA_VERSION` trong
 `measure.py`); `compare.py` tu canh bao neu hai lan do dung version khac nhau.
+

@@ -1,0 +1,336 @@
+{
+  "before_label": "before",
+  "after_label": "after",
+  "before_dir": "D:\\chronos-ai\\demo\\samples\\before",
+  "after_dir": "D:\\chronos-ai\\demo\\samples\\after",
+  "risk_formula_before": "chronos-demo-risk-v3",
+  "risk_formula_after": "chronos-demo-risk-v3",
+  "matched_file_count": 7,
+  "missing_metrics": [],
+  "totals": {
+    "loc": {
+      "before": 3299,
+      "after": 3489,
+      "delta": 190,
+      "reduction_pct": -5.76
+    },
+    "unguarded_allocations": {
+      "before": 30,
+      "after": 0,
+      "delta": -30,
+      "reduction_pct": 100.0
+    },
+    "unpaired_allocations": {
+      "before": 1,
+      "after": 0,
+      "delta": -1,
+      "reduction_pct": 100.0
+    },
+    "cyclomatic_complexity": {
+      "before": 788,
+      "after": 893,
+      "delta": 105,
+      "reduction_pct": -13.32
+    },
+    "raw_pointer_count": {
+      "before": 1229,
+      "after": 1290,
+      "delta": 61,
+      "reduction_pct": -4.96
+    },
+    "malloc_count": {
+      "before": 79,
+      "after": 79,
+      "delta": 0,
+      "reduction_pct": 0.0
+    },
+    "free_count": {
+      "before": 171,
+      "after": 242,
+      "delta": 71,
+      "reduction_pct": -41.52
+    },
+    "risk_score": {
+      "before": 26.53,
+      "after": 27.99,
+      "delta": 1.46,
+      "reduction_pct": -5.5
+    },
+    "risk_score_v3": {
+      "before": 25.72,
+      "after": 3.89,
+      "delta": -21.83,
+      "reduction_pct": 84.88
+    }
+  },
+  "files": [
+    {
+      "file": "clib-package.c",
+      "after_file": "clib/clib-package.c",
+      "matched_by": "file-name",
+      "before": {
+        "loc": 1342,
+        "unguarded_allocations": 1,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 325,
+        "raw_pointer_count": 444,
+        "malloc_count": 10,
+        "free_count": 49,
+        "risk_score": 48.69,
+        "risk_score_v3": 7.0
+      },
+      "after": {
+        "loc": 1360,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 331,
+        "raw_pointer_count": 444,
+        "malloc_count": 10,
+        "free_count": 53,
+        "risk_score": 49.28,
+        "risk_score_v3": 5.0
+      },
+      "reduction_pct": {
+        "loc": -1.34,
+        "unguarded_allocations": 100.0,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -1.85,
+        "raw_pointer_count": 0.0,
+        "malloc_count": 0.0,
+        "free_count": -8.16,
+        "risk_score": -1.21,
+        "risk_score_v3": 28.57
+      }
+    },
+    {
+      "file": "khmm.c",
+      "after_file": "khmm/khmm.c",
+      "matched_by": "file-name",
+      "before": {
+        "loc": 360,
+        "unguarded_allocations": 12,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 102,
+        "raw_pointer_count": 314,
+        "malloc_count": 12,
+        "free_count": 42,
+        "risk_score": 38.05,
+        "risk_score_v3": 52.08
+      },
+      "after": {
+        "loc": 420,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 142,
+        "raw_pointer_count": 370,
+        "malloc_count": 12,
+        "free_count": 93,
+        "risk_score": 44.27,
+        "risk_score_v3": 3.84
+      },
+      "reduction_pct": {
+        "loc": -16.67,
+        "unguarded_allocations": 100.0,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -39.22,
+        "raw_pointer_count": -17.83,
+        "malloc_count": 0.0,
+        "free_count": -121.43,
+        "risk_score": -16.35,
+        "risk_score_v3": 92.63
+      }
+    },
+    {
+      "file": "kopen.c",
+      "after_file": "kopen/kopen.c",
+      "matched_by": "file-name",
+      "before": {
+        "loc": 313,
+        "unguarded_allocations": 12,
+        "unpaired_allocations": 1,
+        "cyclomatic_complexity": 88,
+        "raw_pointer_count": 149,
+        "malloc_count": 12,
+        "free_count": 11,
+        "risk_score": 28.9,
+        "risk_score_v3": 52.58
+      },
+      "after": {
+        "loc": 343,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 108,
+        "raw_pointer_count": 151,
+        "malloc_count": 12,
+        "free_count": 27,
+        "risk_score": 29.05,
+        "risk_score_v3": 3.69
+      },
+      "reduction_pct": {
+        "loc": -9.58,
+        "unguarded_allocations": 100.0,
+        "unpaired_allocations": 100.0,
+        "cyclomatic_complexity": -22.73,
+        "raw_pointer_count": -1.34,
+        "malloc_count": 0.0,
+        "free_count": -145.45,
+        "risk_score": -0.52,
+        "risk_score_v3": 92.98
+      }
+    },
+    {
+      "file": "clib-configure.c",
+      "after_file": "clib/clib-configure.c",
+      "matched_by": "file-name",
+      "before": {
+        "loc": 569,
+        "unguarded_allocations": 5,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 102,
+        "raw_pointer_count": 134,
+        "malloc_count": 5,
+        "free_count": 21,
+        "risk_score": 25.48,
+        "risk_score_v3": 57.93
+      },
+      "after": {
+        "loc": 607,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 117,
+        "raw_pointer_count": 137,
+        "malloc_count": 5,
+        "free_count": 21,
+        "risk_score": 27.37,
+        "risk_score_v3": 4.21
+      },
+      "reduction_pct": {
+        "loc": -6.68,
+        "unguarded_allocations": 100.0,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -14.71,
+        "raw_pointer_count": -2.24,
+        "malloc_count": 0.0,
+        "free_count": 0.0,
+        "risk_score": -7.42,
+        "risk_score_v3": 92.73
+      }
+    },
+    {
+      "file": "skpfa/skpfa.c",
+      "after_file": "skpfa/skpfa.c",
+      "matched_by": "path",
+      "before": {
+        "loc": 247,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 59,
+        "raw_pointer_count": 66,
+        "malloc_count": 14,
+        "free_count": 18,
+        "risk_score": 15.65,
+        "risk_score_v3": 3.49
+      },
+      "after": {
+        "loc": 263,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 69,
+        "raw_pointer_count": 66,
+        "malloc_count": 14,
+        "free_count": 18,
+        "risk_score": 16.19,
+        "risk_score_v3": 3.53
+      },
+      "reduction_pct": {
+        "loc": -6.48,
+        "unguarded_allocations": null,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -16.95,
+        "raw_pointer_count": 0.0,
+        "malloc_count": 0.0,
+        "free_count": 0.0,
+        "risk_score": -3.45,
+        "risk_score_v3": -1.15
+      }
+    },
+    {
+      "file": "skpf10/skpf10.c",
+      "after_file": "skpf10/skpf10.c",
+      "matched_by": "path",
+      "before": {
+        "loc": 251,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 59,
+        "raw_pointer_count": 62,
+        "malloc_count": 14,
+        "free_count": 18,
+        "risk_score": 15.45,
+        "risk_score_v3": 3.5
+      },
+      "after": {
+        "loc": 267,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 69,
+        "raw_pointer_count": 62,
+        "malloc_count": 14,
+        "free_count": 18,
+        "risk_score": 16.0,
+        "risk_score_v3": 3.53
+      },
+      "reduction_pct": {
+        "loc": -6.37,
+        "unguarded_allocations": null,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -16.95,
+        "raw_pointer_count": 0.0,
+        "malloc_count": 0.0,
+        "free_count": 0.0,
+        "risk_score": -3.56,
+        "risk_score_v3": -0.86
+      }
+    },
+    {
+      "file": "sktrd/sktrd.c",
+      "after_file": "sktrd/sktrd.c",
+      "matched_by": "path",
+      "before": {
+        "loc": 217,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 53,
+        "raw_pointer_count": 60,
+        "malloc_count": 12,
+        "free_count": 12,
+        "risk_score": 13.52,
+        "risk_score_v3": 3.43
+      },
+      "after": {
+        "loc": 229,
+        "unguarded_allocations": 0,
+        "unpaired_allocations": 0,
+        "cyclomatic_complexity": 57,
+        "raw_pointer_count": 60,
+        "malloc_count": 12,
+        "free_count": 12,
+        "risk_score": 13.75,
+        "risk_score_v3": 3.46
+      },
+      "reduction_pct": {
+        "loc": -5.53,
+        "unguarded_allocations": null,
+        "unpaired_allocations": null,
+        "cyclomatic_complexity": -7.55,
+        "raw_pointer_count": 0.0,
+        "malloc_count": 0.0,
+        "free_count": 0.0,
+        "risk_score": -1.7,
+        "risk_score_v3": -0.87
+      }
+    }
+  ],
+  "unmatched_before": [],
+  "unmatched_after": []
+}

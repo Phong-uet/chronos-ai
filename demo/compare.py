@@ -24,16 +24,27 @@ import matplotlib.pyplot as plt
 # better", so a positive reduction percentage always means an improvement.
 METRICS = [
     ("loc", "LOC"),
+    # The two allocation-safety metrics lead the table: they move in one
+    # direction when memory handling improves, which risk_score does not.
+    ("unguarded_allocations", "Unguarded allocations"),
+    ("unpaired_allocations", "Unpaired allocations"),
     ("cyclomatic_complexity", "Cyclomatic complexity"),
     ("raw_pointer_count", "Raw pointer count"),
     ("malloc_count", "Alloc calls"),
     ("free_count", "Free calls"),
-    ("unpaired_allocations", "Unpaired allocations"),
-    ("risk_score", "Risk score"),
+    ("risk_score", "Risk score (v2)"),
+    ("risk_score_v3", "Risk score (v3)"),
 ]
 
+# Metrics that a measure.py run predating them will not carry. Comparing an old
+# JSON against a new one must not invent a zero, so these are reported as
+# missing instead of silently aggregated.
+OPTIONAL_METRICS = ("unguarded_allocations", "risk_score_v3")
+
 CHART_METRICS = [
-    ("risk_score", "Risk\nscore"),
+    ("unguarded_allocations", "Unguarded\nallocs"),
+    ("risk_score_v3", "Risk v3\nL x I"),
+    ("risk_score", "Risk v2\n(legacy)"),
     ("cyclomatic_complexity", "Cyclomatic"),
     ("raw_pointer_count", "Raw\npointers"),
     ("malloc_count", "Alloc\ncalls"),
@@ -41,8 +52,20 @@ CHART_METRICS = [
     ("loc", "LOC"),
 ]
 
+RISK_SCORE_NOTE = (
+    "Note: Risk score (v2) includes cyclomatic complexity, which can increase "
+    "when defensive NULL-checks are added - so it can rise even as the code gets "
+    "safer. Risk score (v3) is OWASP-style Likelihood x Impact and excludes "
+    "complexity; read it together with the unguarded/unpaired allocation metrics "
+    "above for the safety signal."
+)
+
 COLOR_BEFORE = "#B04A3F"   # legacy / risk
 COLOR_AFTER = "#2E7D63"    # modernized
+
+
+# Bounded 0-100 per file: the fleet figure is a mean, never a sum.
+MEAN_METRICS = ("risk_score", "risk_score_v3")
 
 
 def pct_reduction(before, after):
@@ -121,8 +144,25 @@ def pair_files(before, after):
     return pairs, only_before, only_after
 
 
+def missing_metrics(payload):
+    """Optional metric keys absent from a measure.py payload's rows."""
+    rows = payload.get("files") or []
+    if not rows:
+        return []
+    return [k for k in OPTIONAL_METRICS if k not in rows[0]]
+
+
 def build_comparison(before, after):
     pairs, only_before, only_after = pair_files(before, after)
+
+    absent = sorted(set(missing_metrics(before)) | set(missing_metrics(after)))
+
+    def val(row, key):
+        # Only OPTIONAL_METRICS may be absent; anything else is a malformed run
+        # and should still raise rather than quietly read as 0.
+        if key in absent:
+            return 0
+        return row[key]
 
     per_file = []
     for rel, b, a, how in pairs:
@@ -130,9 +170,9 @@ def build_comparison(before, after):
             "file": rel,
             "after_file": a["file"],
             "matched_by": how,
-            "before": {k: b[k] for k, _ in METRICS},
-            "after": {k: a[k] for k, _ in METRICS},
-            "reduction_pct": {k: pct_reduction(b[k], a[k]) for k, _ in METRICS},
+            "before": {k: val(b, k) for k, _ in METRICS},
+            "after": {k: val(a, k) for k, _ in METRICS},
+            "reduction_pct": {k: pct_reduction(val(b, k), val(a, k)) for k, _ in METRICS},
         }
         per_file.append(entry)
 
@@ -142,7 +182,7 @@ def build_comparison(before, after):
         vals = [p[side_key][row_key] for p in per_file]
         if not vals:
             return 0
-        if row_key == "risk_score":
+        if row_key in MEAN_METRICS:
             return round(sum(vals) / len(vals), 2)
         return sum(vals)
 
@@ -165,6 +205,7 @@ def build_comparison(before, after):
         "risk_formula_before": before.get("risk_formula_version"),
         "risk_formula_after": after.get("risk_formula_version"),
         "matched_file_count": len(per_file),
+        "missing_metrics": absent,
         "totals": totals,
         "files": per_file,
         "unmatched_before": only_before,
@@ -195,17 +236,33 @@ def render_markdown(cmp_data):
         "| Metric | Before | After | Reduction |",
         "| --- | ---: | ---: | ---: |",
     ]
+    missing = cmp_data.get("missing_metrics") or []
     for key, title in METRICS:
         row = t[key]
+        if key in missing:
+            lines.append("| {} | n/a | n/a | n/a |".format(title))
+            continue
         lines.append("| {} | {} | {} | **{}** |".format(
             title, row["before"], row["after"], fmt_pct(row["reduction_pct"])))
 
+    lines += ["", "> " + RISK_SCORE_NOTE]
+
+    if missing:
+        lines += ["", "> **Note:** {} not present in these measure.py runs "
+                      "(regenerate both sides with a current measure.py to populate "
+                      "them).".format(", ".join("`{}`".format(m) for m in missing))]
+
     lines += ["", "## Per file", "",
-              "| File | Risk before | Risk after | Risk red. | Cyclo red. | Raw ptr red. | Alloc red. |",
-              "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+              "| File | Unguarded before | Unguarded after | Unguarded red. "
+              "| Risk before | Risk after | Risk red. | Cyclo red. | Raw ptr red. | Alloc red. |",
+              "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    unguarded_missing = "unguarded_allocations" in missing
     for p in cmp_data["files"]:
-        lines.append("| {} | {} | {} | {} | {} | {} | {} |".format(
+        lines.append("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} |".format(
             p["file"],
+            "n/a" if unguarded_missing else p["before"]["unguarded_allocations"],
+            "n/a" if unguarded_missing else p["after"]["unguarded_allocations"],
+            "n/a" if unguarded_missing else fmt_pct(p["reduction_pct"]["unguarded_allocations"]),
             p["before"]["risk_score"], p["after"]["risk_score"],
             fmt_pct(p["reduction_pct"]["risk_score"]),
             fmt_pct(p["reduction_pct"]["cyclomatic_complexity"]),
@@ -231,9 +288,14 @@ def render_markdown(cmp_data):
 def render_chart(cmp_data, out_path):
     """Grouped bar chart: before vs after for each headline metric."""
     t = cmp_data["totals"]
-    labels = [title for key, title in CHART_METRICS]
-    before_vals = [t[key]["before"] for key, _ in CHART_METRICS]
-    after_vals = [t[key]["after"] for key, _ in CHART_METRICS]
+    # Bars are normalized to the before value, so a metric the inputs do not
+    # carry would draw a full-height before bar against an empty after bar -
+    # an invented 100% improvement. Omit it instead.
+    missing = set(cmp_data.get("missing_metrics") or [])
+    chart_metrics = [(k, title) for k, title in CHART_METRICS if k not in missing]
+    labels = [title for key, title in chart_metrics]
+    before_vals = [t[key]["before"] for key, _ in chart_metrics]
+    after_vals = [t[key]["after"] for key, _ in chart_metrics]
 
     # Metrics live on wildly different scales (LOC in thousands, risk score
     # 0-100), so bars are normalized to the before value and the real numbers

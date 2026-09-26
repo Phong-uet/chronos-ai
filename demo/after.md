@@ -1,20 +1,20 @@
-# Measurement: before
+# Measurement: after
 
-- Source directory: `D:\chronos-ai\demo\samples\before`
+- Source directory: `D:\chronos-ai\demo\samples\after`
 - Files measured: **7**
 - Generated: 2026-09-26 09:35:50
 - Risk formula: `chronos-demo-risk-v3` (legacy `chronos-demo-risk-v2` retained as the Risk v2 column)
 
 | File | LOC | Cyclomatic | Raw ptr | Alloc | Free | Unguarded | Likelihood | Impact | Risk v2 | Risk v3 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| clib-package.c | 1342 | 325 | 444 | 10 | 49 | 1 | 7.0 | 100.0 | 48.69 | 7.0 |
-| khmm.c | 360 | 102 | 314 | 12 | 42 | 12 | 70.0 | 74.4 | 38.05 | 52.08 |
-| kopen.c | 313 | 88 | 149 | 12 | 11 | 12 | 72.5 | 72.52 | 28.9 | 52.58 |
-| clib-configure.c | 569 | 102 | 134 | 5 | 21 | 5 | 70.0 | 82.76 | 25.48 | 57.93 |
-| skpfa/skpfa.c | 247 | 59 | 66 | 14 | 18 | 0 | 5.0 | 69.88 | 15.65 | 3.49 |
-| skpf10/skpf10.c | 251 | 59 | 62 | 14 | 18 | 0 | 5.0 | 70.04 | 15.45 | 3.5 |
-| sktrd/sktrd.c | 217 | 53 | 60 | 12 | 12 | 0 | 5.0 | 68.68 | 13.52 | 3.43 |
-| **TOTAL / AVG** | 3299 | 788 | 1229 | 79 | 171 | 30 | 33.5 | 76.9 | 26.53 | **25.72** |
+| clib/clib-package.c | 1360 | 331 | 444 | 10 | 53 | 0 | 5.0 | 100.0 | 49.28 | 5.0 |
+| khmm/khmm.c | 420 | 142 | 370 | 12 | 93 | 0 | 5.0 | 76.8 | 44.27 | 3.84 |
+| kopen/kopen.c | 343 | 108 | 151 | 12 | 27 | 0 | 5.0 | 73.72 | 29.05 | 3.69 |
+| clib/clib-configure.c | 607 | 117 | 137 | 5 | 21 | 0 | 5.0 | 84.28 | 27.37 | 4.21 |
+| skpfa/skpfa.c | 263 | 69 | 66 | 14 | 18 | 0 | 5.0 | 70.52 | 16.19 | 3.53 |
+| skpf10/skpf10.c | 267 | 69 | 62 | 14 | 18 | 0 | 5.0 | 70.68 | 16.0 | 3.53 |
+| sktrd/sktrd.c | 229 | 57 | 60 | 12 | 12 | 0 | 5.0 | 69.16 | 13.75 | 3.46 |
+| **TOTAL / AVG** | 3489 | 893 | 1290 | 79 | 242 | 0 | 5.0 | 77.88 | 27.99 | **3.89** |
 
 > On the TOTAL row Likelihood, Impact and both risk scores are the **mean** across files; every other column is a sum.
 >
@@ -24,8 +24,8 @@
 
 | File | Stage | Detail |
 | --- | --- | --- |
-| clib-configure.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
-| clib-package.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
+| clib/clib-configure.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
+| clib/clib-package.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
 | skpf10/skpf10.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
 | skpfa/skpfa.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
 | sktrd/sktrd.c | parse | Tree contains syntax errors (recovered via Tree-sitter error nodes) |
