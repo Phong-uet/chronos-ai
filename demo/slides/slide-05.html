@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 05 Bob in Action</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--accent blob--tr"></div>
+    <div class="blob blob--purple blob--bl"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow"><span class="kicker-num">04</span> Bob in Action</div>
+
+    <h1 class="title title--sm">Autonomous, but on a short leash.</h1>
+    <div class="rule" style="margin:14px 0 18px"></div>
+
+    <div class="split">
+
+      <!-- =================================================================
+           IMAGE PLACEHOLDER 1 of 2  —  BOB SESSION SCREENSHOT
+           Expected file:  demo/slides/PLACEHOLDER_bob_screenshot.png
+           Currently holds a crop of bob_sessions/chronos_clib_package_final.png
+           (the "Report on all 7 sites" audit table for clib-package.c),
+           cropped to the table region only:
+               from PIL import Image
+               im = Image.open("bob_sessions/chronos_clib_package_final.png")
+               im.crop((0, 295, 928, 940)).save(
+                   "demo/slides/PLACEHOLDER_bob_screenshot.png")
+           Chosen over the kopen.c capture used on slide 7, to avoid repeating
+           the same file two slides in a row and to show the breadth of the
+           audit (all 7 allocation sites checked, not just one fix).
+           This frame is ~740x430 (about 1.7:1); the crop above is 1.44:1 and
+           fills it with only a hairline of letterboxing.
+           Until the file exists, the alt text renders in its place.
+      ================================================================== -->
+      <div class="shot">
+        <img src="PLACEHOLDER_bob_screenshot.png"
+             alt="[ PLACE demo/slides/PLACEHOLDER_bob_screenshot.png HERE — a capture from bob_sessions/ ]">
+      </div>
+
+      <div class="split__side">
+        <p style="margin:0;font-size:25px;line-height:1.38;color:var(--ink);font-weight:600">
+          IBM Bob autonomously modernizes legacy&nbsp;C for memory safety &mdash; <strong style="color:var(--purple-deep)">7 files</strong>,
+          checking every allocation site, guided by strict scope constraints.
+        </p>
+
+        <ul class="ilist" style="gap:14px">
+          <li style="font-size:22px">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+            </span>
+            <span>Touch only the listed files.</span>
+          </li>
+          <li style="font-size:22px">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+            </span>
+            <span>Never the analyzer.</span>
+          </li>
+          <li style="font-size:22px">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+            </span>
+            <span>Never the measurement baseline.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">05 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>

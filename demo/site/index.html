@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chronos — AI-Powered Legacy Code Modernization with IBM Bob</title>
+<meta name="description" content="Chronos measures, targets, and modernizes memory-unsafe legacy C with IBM Bob, then re-measures with the same analyzer to prove the improvement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================== HEADER / HERO ============================== -->
+<header class="hero">
+  <div class="blobs">
+    <div class="blob blob--purple blob--tr"></div>
+    <div class="blob blob--accent blob--bl"></div>
+  </div>
+  <div class="wrap">
+    <div class="hero__top">
+      <div class="brand">Chronos<span class="dot">.</span></div>
+      <a class="gh-link" href="https://github.com/Phong-uet/chronos-ai" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        View on GitHub
+      </a>
+    </div>
+
+    <h1>Chronos<span class="dot">.</span></h1>
+    <p class="lede">AI-Powered Legacy Code Modernization with IBM Bob</p>
+    <div class="pill">IBM Bob 2.0 Hackathon &mdash; Sept 2026</div>
+  </div>
+</header>
+
+<!-- ============================== 1. THE LOOP ============================== -->
+<section id="loop" class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow">The Loop</div>
+    <h2 class="section-title">A closed measurement loop, not a one-shot rewrite.</h2>
+    <p class="lede">Never &ldquo;trust the AI&rdquo; &mdash; prove the improvement with the same static analyzer, before and after.</p>
+
+    <div class="flow">
+
+      <div class="flow__step">
+        <span class="step-no">STEP 1</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 18a8.5 8.5 0 0117 0"/><path d="M12 18l4.5-6.5"/><path d="M3.5 18h17"/>
+          </svg>
+        </div>
+        <h3>Measure</h3>
+        <p>tree-sitter baseline, whole codebase</p>
+      </div>
+
+      <div class="flow__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 2</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Target</h3>
+        <p>rank by Likelihood &times; Impact risk</p>
+      </div>
+
+      <div class="flow__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step flow__step--hero">
+        <span class="step-no">STEP 3</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2.5l2.2 5.8 5.8 2.2-5.8 2.2L13 18.5l-2.2-5.8L5 10.5l5.8-2.2L13 2.5z"/><path d="M4.5 17v4M2.5 19h4"/>
+          </svg>
+        </div>
+        <h3>Modernize</h3>
+        <p>IBM Bob rewrites, scope-constrained</p>
+      </div>
+
+      <div class="flow__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 4</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 12a8.5 8.5 0 0114.6-5.9"/><path d="M20.5 12a8.5 8.5 0 01-14.6 5.9"/>
+            <path d="M18.5 2.5v4h-4M5.5 21.5v-4h4"/>
+          </svg>
+        </div>
+        <h3>Re-measure</h3>
+        <p>identical analyzer, no moved goalposts</p>
+      </div>
+
+      <div class="flow__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 5</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17.5l6-6 4 4 8-8"/><path d="M14.5 7.5H21v6.5"/>
+          </svg>
+        </div>
+        <h3>Impact</h3>
+        <p>a hard before/after delta, not a vibe</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 2. HEADLINE NUMBER ============================== -->
+<section id="results" class="section-pad stat-section section--dark">
+  <div class="blobs">
+    <div class="blob blob--purple blob--tr"></div>
+    <div class="blob blob--accent blob--bl"></div>
+  </div>
+  <div class="wrap">
+    <div class="bignum">
+      <span class="from">30</span>
+      <span class="arw" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M14 5l7 7-7 7"/></svg>
+      </span>
+      <span class="to">0</span>
+    </div>
+    <p class="stat-caption">
+      Unguarded allocation sites <b>eliminated</b> across 7 files, verified by the same analyzer before and after.
+    </p>
+  </div>
+</section>
+
+<!-- ============================== 3. FULL COMPARISON ============================== -->
+<section id="comparison" class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow">Full Before / After</div>
+    <h2 class="section-title">Every metric, measured twice.</h2>
+    <p class="lede">Same tree-sitter analyzer, same 7 files, run before IBM Bob touched anything and again after.</p>
+
+    <div class="chart-frame">
+      <img src="../comparison.png" alt="Bar chart comparing before and after values for unguarded allocations, risk scores, cyclomatic complexity, raw pointers, allocation calls, unpaired allocations, and lines of code across 7 files.">
+    </div>
+
+    <p class="scroll-hint">Swipe to see all columns &rarr;</p>
+    <div class="table-scroll">
+      <table class="metrics">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Before</th>
+            <th>After</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LOC</td>
+            <td>3299</td>
+            <td>3489</td>
+            <td class="reduction">+5.8%</td>
+          </tr>
+          <tr>
+            <td>Unguarded allocations</td>
+            <td>30</td>
+            <td>0</td>
+            <td class="reduction">&minus;100.0%</td>
+          </tr>
+          <tr>
+            <td>Unpaired allocations</td>
+            <td>1</td>
+            <td>0</td>
+            <td class="reduction">&minus;100.0%</td>
+          </tr>
+          <tr>
+            <td>Cyclomatic complexity</td>
+            <td>788</td>
+            <td>893</td>
+            <td class="reduction">+13.3%</td>
+          </tr>
+          <tr>
+            <td>Raw pointer count</td>
+            <td>1229</td>
+            <td>1290</td>
+            <td class="reduction">+5.0%</td>
+          </tr>
+          <tr>
+            <td>Risk score (v2)</td>
+            <td>26.53</td>
+            <td>27.99</td>
+            <td class="reduction">+5.5%</td>
+          </tr>
+          <tr>
+            <td>Risk score (v3)</td>
+            <td>25.72</td>
+            <td>3.89</td>
+            <td class="reduction">&minus;84.9%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="table-note">
+      Risk score (v2) includes cyclomatic complexity, which can increase when defensive NULL-checks
+      are added &mdash; so it can rise even as the code gets safer. Risk score (v3) is OWASP-style
+      Likelihood &times; Impact and excludes complexity; read it together with the unguarded/unpaired
+      allocation metrics above for the safety signal.
+    </p>
+  </div>
+</section>
+
+<!-- ============================== 4. BUG SPOTLIGHTS ============================== -->
+<section id="bugs" class="section-pad">
+  <div class="blobs">
+    <div class="blob blob--accent blob--tr"></div>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow">Bug Spotlights</div>
+    <h2 class="section-title">Two bugs Bob found along the way.</h2>
+    <p class="lede">Not synthetic examples &mdash; both are the actual diffs Bob produced while modernizing these files.</p>
+
+    <!-- ---- Bug 1: clib-package.c NULL deref ---- -->
+    <div class="bug">
+      <div class="bug__head">
+        <h3>A guaranteed crash on any network failure</h3>
+        <span class="bug__file">clib-package.c &middot; clib_package_new_from_slug_with_package_name()</span>
+      </div>
+
+      <div class="diff-grid">
+        <div>
+          <div class="code__bar code__bar--before">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4.5M12 16h.01"/></svg>
+            Before
+          </div>
+          <div class="code">
+<pre><span class="ln"><span class="v">res</span> = <span class="f">http_get</span>(<span class="v">json_url</span>);</span><span class="ln ln--del"><span class="v">json</span> = <span class="v">res</span>-&gt;<span class="v">data</span>;</span><span class="ln"><span class="f">_debug</span>(<span class="s">"status: %d"</span>, <span class="v">res</span>-&gt;<span class="v">status</span>);</span><span class="ln"><span class="cf">if</span> (!<span class="v">res</span> || !<span class="v">res</span>-&gt;<span class="v">ok</span>) {</span><span class="ln">  <span class="cf">goto</span> <span class="v">download</span>;</span><span class="ln">}</span></pre>
+          </div>
+        </div>
+
+        <div>
+          <div class="code__bar code__bar--after">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+            After
+          </div>
+          <div class="code">
+<pre><span class="ln"><span class="v">res</span> = <span class="f">http_get</span>(<span class="v">json_url</span>);</span><span class="ln ln--add"><span class="cf">if</span> (!<span class="v">res</span> || !<span class="v">res</span>-&gt;<span class="v">ok</span>) {</span><span class="ln ln--add">  <span class="cf">goto</span> <span class="v">download</span>;</span><span class="ln ln--add">}</span><span class="ln"><span class="v">json</span> = <span class="v">res</span>-&gt;<span class="v">data</span>;</span><span class="ln"><span class="f">_debug</span>(<span class="s">"status: %d"</span>, <span class="v">res</span>-&gt;<span class="v">status</span>);</span></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17H2.5L12 3z"/><path d="M12 9.5v4.5M12 17h.01"/></svg>
+        <span><strong>A guaranteed crash on any network failure.</strong>
+        <code>http_get()</code> returns <code>NULL</code> when the request fails, and the
+        original code dereferenced it one line <em>before</em> the NULL check it already had.
+        Now the check runs first.</span>
+      </div>
+    </div>
+
+    <!-- ---- Bug 2: kopen.c heap overflow ---- -->
+    <div class="bug">
+      <div class="bug__head">
+        <h3>A heap overflow, self-detected</h3>
+        <span class="bug__file">kopen.c &middot; http_open(), 64&nbsp;KB header buffer</span>
+        <span class="bug__found">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5l2.2 5.8 5.8 2.2-5.8 2.2L13 18.5l-2.2-5.8L5 10.5l5.8-2.2L13 2.5z"/><path d="M4.5 17v4M2.5 19h4"/></svg>
+          Not in our prompt scope &mdash; Bob found this independently
+        </span>
+      </div>
+
+      <div class="diff-grid">
+        <div>
+          <div class="code__bar code__bar--before">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4.5M12 16h.01"/></svg>
+            Before
+          </div>
+          <div class="code">
+<pre><span class="ln"><span class="cf">while</span> (<span class="f">read</span>(<span class="v">fd</span>, <span class="v">buf</span> + <span class="v">l</span>, <span class="n">1</span>)) {</span><span class="ln">  <span class="cf">if</span> (<span class="v">buf</span>[<span class="v">l</span>] == <span class="s">'\n'</span> &amp;&amp; <span class="v">l</span> &gt;= <span class="n">3</span>)</span><span class="ln">    <span class="cf">if</span> (<span class="f">strncmp</span>(...) == <span class="n">0</span>) <span class="cf">break</span>;</span><span class="ln ln--del">  ++<span class="v">l</span>;   <span class="c">/* no upper bound */</span></span><span class="ln">}</span><span class="ln ln--del"><span class="v">buf</span>[<span class="v">l</span>] = <span class="n">0</span>;  <span class="c">/* l reaches 0x10000 */</span></span></pre>
+          </div>
+        </div>
+
+        <div>
+          <div class="code__bar code__bar--after">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+            After
+          </div>
+          <div class="code">
+<pre><span class="ln"><span class="cf">while</span> (<span class="f">read</span>(<span class="v">fd</span>, <span class="v">buf</span> + <span class="v">l</span>, <span class="n">1</span>)) {</span><span class="ln">  <span class="cf">if</span> (<span class="v">buf</span>[<span class="v">l</span>] == <span class="s">'\n'</span> &amp;&amp; <span class="v">l</span> &gt;= <span class="n">3</span>)</span><span class="ln">    <span class="cf">if</span> (<span class="f">strncmp</span>(...) == <span class="n">0</span>) <span class="cf">break</span>;</span><span class="ln">  ++<span class="v">l</span>;</span><span class="ln ln--add">  <span class="cf">if</span> (<span class="v">l</span> &gt;= <span class="n">0xffff</span>) <span class="cf">break</span>;  <span class="c">/* bound */</span></span><span class="ln">}</span><span class="ln"><span class="v">buf</span>[<span class="v">l</span>] = <span class="n">0</span>;  <span class="c">/* always in range */</span></span></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9.5 17H2.5L12 3z"/><path d="M12 9.5v4.5M12 17h.01"/></svg>
+        <span>A header larger than 64&nbsp;KB walks <code>l</code> to <code>0x10000</code>, and
+        <code>buf[l] = 0</code> writes <strong>one byte past the heap allocation</strong>. The loop
+        now stops one byte short.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 5. SCORING MODEL ============================== -->
+<section id="scoring" class="section-pad">
+  <div class="wrap">
+    <div class="eyebrow">Scoring Model</div>
+    <h2 class="section-title">Why we didn&rsquo;t just use one risk number.</h2>
+    <p class="lede">Adding defensive NULL-checks <em style="font-style:normal;font-weight:700;color:var(--purple-deep)">raises</em> cyclomatic complexity. A blended score would punish the fix.</p>
+
+    <div class="formula">
+      <div class="fbar">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:88px"></div></div>
+        <div class="fbar__name">Likelihood</div>
+        <div class="fbar__sub">unguarded &amp; unpaired allocations</div>
+      </div>
+
+      <div class="fop" aria-hidden="true">&times;</div>
+
+      <div class="fbar fbar--impact">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:64px"></div></div>
+        <div class="fbar__name">Impact</div>
+        <div class="fbar__sub">pointer density &amp; code scope</div>
+      </div>
+
+      <div class="fop" aria-hidden="true">=</div>
+
+      <div class="fbar fbar--risk">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:118px"></div></div>
+        <div class="fbar__name">Risk</div>
+        <div class="fbar__sub">OWASP style &mdash; complexity excluded</div>
+      </div>
+    </div>
+
+    <p class="cite">
+      <em>Shin &amp; Williams (2010)</em> found only a weak correlation (r &asymp; 0.30) between cyclomatic
+      complexity and real vulnerabilities &mdash; a poor proxy for safety, and a terrible one for
+      measuring a safety fix.
+    </p>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-links">
+        <a href="https://github.com/Phong-uet/chronos-ai" target="_blank" rel="noopener">github.com/Phong-uet/chronos-ai</a>
+        <span class="sep">&middot;</span>
+        <span>Built with IBM Bob</span>
+        <span class="sep">&middot;</span>
+        <span>Team bubududu</span>
+      </div>
+      <span>IBM Bob 2.0 Hackathon &mdash; Sept 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

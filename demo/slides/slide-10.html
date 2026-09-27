@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 10 Why Not One Risk Number</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--purple blob--tr"></div>
+    <div class="blob blob--accent blob--bl"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow"><span class="kicker-num">08</span> Scoring Model</div>
+
+    <h1 class="title title--sm">Why we didn&rsquo;t just use one risk number.</h1>
+    <p class="subtitle" style="font-size:24px;margin-top:10px">
+      Adding defensive NULL-checks <em style="font-style:normal;font-weight:700;color:var(--purple-deep)">raises</em> cyclomatic complexity.
+      A blended score would punish the fix.
+    </p>
+    <div class="rule" style="margin:16px 0 14px"></div>
+
+    <div class="formula">
+
+      <div class="fbar">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:112px"></div></div>
+        <div class="fbar__name">Likelihood</div>
+        <div class="fbar__sub">unguarded &amp; unpaired allocations</div>
+      </div>
+
+      <div class="fop">&times;</div>
+
+      <div class="fbar fbar--impact">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:80px"></div></div>
+        <div class="fbar__name">Impact</div>
+        <div class="fbar__sub">pointer density &amp; code scope</div>
+      </div>
+
+      <div class="fop">=</div>
+
+      <div class="fbar fbar--risk">
+        <div class="fbar__plot"><div class="fbar__bar" style="height:150px"></div></div>
+        <div class="fbar__name">Risk</div>
+        <div class="fbar__sub">OWASP style &mdash; complexity excluded</div>
+      </div>
+
+    </div>
+
+    <p class="cite">
+      <em>Shin &amp; Williams (2010)</em> found only a weak correlation (r &asymp; 0.30) between cyclomatic
+      complexity and real vulnerabilities &mdash; a poor proxy for safety, and a terrible one for measuring a safety fix.
+    </p>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">10 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>

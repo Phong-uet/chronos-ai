@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 09 Before / After</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--accent blob--tr"></div>
+    <div class="blob blob--purple blob--bl"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow"><span class="kicker-num">07</span> Full Before / After</div>
+
+    <h1 class="title title--sm">Every metric, measured twice.</h1>
+    <div class="rule" style="margin:12px 0 16px"></div>
+
+    <div class="split">
+
+      <!-- =================================================================
+           IMAGE PLACEHOLDER 2 of 2  —  COMPARISON CHART
+           Expected file:  demo/slides/PLACEHOLDER_comparison_chart.png
+           Copy the generated chart to that exact path:
+               copy demo\comparison.png ^
+                    demo\slides\PLACEHOLDER_comparison_chart.png
+           (Kept as a copy rather than ../comparison.png so demo/slides/
+           stays self-contained for the PDF export and for sharing.)
+           This frame is ~740x400 (about 1.85:1); demo/comparison.png is
+           1760x1024 (1.72:1) and fits with only a hairline of letterboxing.
+           Until the file exists, the alt text renders in its place.
+      ================================================================== -->
+      <div class="shot">
+        <img src="PLACEHOLDER_comparison_chart.png"
+             alt="[ PLACE demo/slides/PLACEHOLDER_comparison_chart.png HERE — copy of demo/comparison.png ]">
+      </div>
+
+      <div class="split__side">
+        <div class="chips chips--stack">
+          <div class="chip">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </span>
+            Unguarded allocs <b>30 &rarr; 0</b>
+          </div>
+          <div class="chip">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h9a2 2 0 012 2v12a2 2 0 01-2 2H9"/><path d="M13 12H2M6 8l-4 4 4 4"/></svg>
+            </span>
+            Unpaired allocs <b>1 &rarr; 0</b>
+          </div>
+          <div class="chip">
+            <span class="icon-wrap">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M21 17v-5h-5"/></svg>
+            </span>
+            Risk (L &times; I) <b>&minus;84.9%</b>
+          </div>
+        </div>
+
+        <p style="margin:0;font-size:22px;line-height:1.4;color:var(--body)">
+          Both allocation metrics <strong style="color:var(--purple-deep)">&minus;100%</strong>. Risk collapsed
+          <strong style="color:var(--purple-deep)">25.72 &rarr; 3.89</strong> &mdash; a near-zero residual &mdash;
+          for only <strong style="color:var(--purple-deep)">+5.8%</strong> more code.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">09 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>

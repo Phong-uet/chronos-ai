@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 07 Bug Catch #2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--accent blob--tr"></div>
+    <div class="blob blob--purple blob--bl"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow">
+      <span class="kicker-num">06</span> Bug Catch &#35;2
+      <span class="badge-unscoped" style="margin-left:auto;text-transform:none;letter-spacing:0">
+        <span class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5l2.2 5.8 5.8 2.2-5.8 2.2L13 18.5l-2.2-5.8L5 10.5l5.8-2.2L13 2.5z"/><path d="M4.5 17v4M2.5 19h4"/></svg>
+        </span>
+        Not in our prompt scope &mdash; Bob found this independently
+      </span>
+    </div>
+
+    <h1 class="title title--sm">A heap overflow, self-detected.</h1>
+    <p class="subtitle" style="font-size:23px;margin-top:8px">kopen.c &mdash; <code style="font-family:var(--mono)">http_open()</code>, reading the response header into a 64&nbsp;KB <code style="font-family:var(--mono)">calloc</code> buffer</p>
+    <div class="rule" style="margin:14px 0 18px"></div>
+
+    <div class="cols-2" style="gap:30px">
+
+      <div>
+        <div class="code__bar code__bar--before">
+          <span class="icon-wrap">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4.5M12 16h.01"/></svg>
+          </span>
+          Before
+        </div>
+        <div class="code" style="font-size:19px">
+<pre><span class="ln"><span class="cf">while</span> (<span class="f">read</span>(<span class="v">fd</span>, <span class="v">buf</span> + <span class="v">l</span>, <span class="n">1</span>)) {</span><span class="ln">  <span class="cf">if</span> (<span class="v">buf</span>[<span class="v">l</span>] == <span class="s">'\n'</span> &amp;&amp; <span class="v">l</span> &gt;= <span class="n">3</span>)</span><span class="ln">    <span class="cf">if</span> (<span class="f">strncmp</span>(...) == <span class="n">0</span>) <span class="cf">break</span>;</span><span class="ln ln--del">  ++<span class="v">l</span>;   <span class="c">/* no upper bound */</span></span><span class="ln">}</span><span class="ln ln--del"><span class="v">buf</span>[<span class="v">l</span>] = <span class="n">0</span>;  <span class="c">/* l reaches 0x10000 */</span></span></pre>
+        </div>
+      </div>
+
+      <div>
+        <div class="code__bar code__bar--after">
+          <span class="icon-wrap">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+          </span>
+          After
+        </div>
+        <div class="code" style="font-size:19px">
+<pre><span class="ln"><span class="cf">while</span> (<span class="f">read</span>(<span class="v">fd</span>, <span class="v">buf</span> + <span class="v">l</span>, <span class="n">1</span>)) {</span><span class="ln">  <span class="cf">if</span> (<span class="v">buf</span>[<span class="v">l</span>] == <span class="s">'\n'</span> &amp;&amp; <span class="v">l</span> &gt;= <span class="n">3</span>)</span><span class="ln">    <span class="cf">if</span> (<span class="f">strncmp</span>(...) == <span class="n">0</span>) <span class="cf">break</span>;</span><span class="ln">  ++<span class="v">l</span>;</span><span class="ln ln--add">  <span class="cf">if</span> (<span class="v">l</span> &gt;= <span class="n">0xffff</span>) <span class="cf">break</span>;  <span class="c">/* bound */</span></span><span class="ln">}</span><span class="ln"><span class="v">buf</span>[<span class="v">l</span>] = <span class="n">0</span>;  <span class="c">/* always in range */</span></span></pre>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <span class="icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17H2.5L12 3z"/><path d="M12 9.5v4.5M12 17h.01"/></svg>
+      </span>
+      <span>A header larger than 64&nbsp;KB walks <code style="font-family:var(--mono)">l</code> to <code style="font-family:var(--mono)">0x10000</code>, and
+      <code style="font-family:var(--mono)">buf[l] = 0</code> writes <strong>one byte past the heap allocation</strong>. The loop now stops one byte short.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">07 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>

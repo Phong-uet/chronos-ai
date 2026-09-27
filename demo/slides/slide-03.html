@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 03 Our Approach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--accent blob--tr"></div>
+    <div class="blob blob--purple blob--bl"></div>
+    <div class="blob blob--ring blob--mid"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow"><span class="kicker-num">02</span> Our Approach</div>
+
+    <h1 class="title">A closed measurement loop.</h1>
+    <p class="subtitle">Prove the improvement with the same analyzer &mdash; before and after.</p>
+    <div class="rule"></div>
+
+    <div class="flow">
+
+      <div class="flow__step">
+        <span class="step-no">STEP 1</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 18a8.5 8.5 0 0117 0"/><path d="M12 18l4.5-6.5"/><path d="M3.5 18h17"/>
+          </svg>
+        </div>
+        <h3>Measure</h3>
+        <p>tree-sitter baseline, whole codebase</p>
+      </div>
+
+      <div class="flow__arrow">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 2</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Target</h3>
+        <p>rank by Likelihood &times; Impact risk</p>
+      </div>
+
+      <div class="flow__arrow">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step flow__step--hero">
+        <span class="step-no">STEP 3</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2.5l2.2 5.8 5.8 2.2-5.8 2.2L13 18.5l-2.2-5.8L5 10.5l5.8-2.2L13 2.5z"/><path d="M4.5 17v4M2.5 19h4"/>
+          </svg>
+        </div>
+        <h3>Modernize</h3>
+        <p>IBM Bob rewrites, scope-constrained</p>
+      </div>
+
+      <div class="flow__arrow">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 4</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3.5 12a8.5 8.5 0 0114.6-5.9"/><path d="M20.5 12a8.5 8.5 0 01-14.6 5.9"/>
+            <path d="M18.5 2.5v4h-4M5.5 21.5v-4h4"/>
+          </svg>
+        </div>
+        <h3>Re-measure</h3>
+        <p>identical analyzer, no moved goalposts</p>
+      </div>
+
+      <div class="flow__arrow">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </div>
+
+      <div class="flow__step">
+        <span class="step-no">STEP 5</span>
+        <div class="flow__ico">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 17.5l6-6 4 4 8-8"/><path d="M14.5 7.5H21v6.5"/>
+          </svg>
+        </div>
+        <h3>Impact</h3>
+        <p>a hard before/after delta, not a vibe</p>
+      </div>
+
+    </div>
+
+    <div class="loop-note">
+      <span class="icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3.5 12a8.5 8.5 0 0114.6-5.9"/><path d="M20.5 12a8.5 8.5 0 01-14.6 5.9"/><path d="M18.5 2.5v4h-4M5.5 21.5v-4h4"/>
+        </svg>
+      </span>
+      The loop repeats until the risk metrics stop moving &mdash; measurement is the contract.
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">03 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>

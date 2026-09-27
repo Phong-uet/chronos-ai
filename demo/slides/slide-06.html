@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chronos — 06 Bug Catch #1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slide">
+  <div class="blobs">
+    <div class="blob blob--purple blob--tr"></div>
+    <div class="blob blob--accent blob--bl"></div>
+  </div>
+
+  <div class="slide__inner">
+    <div class="eyebrow"><span class="kicker-num">05</span> Bug Catch &#35;1</div>
+
+    <h1 class="title title--sm">Bob found a crash bug we didn&rsquo;t ask about.</h1>
+    <p class="subtitle" style="font-size:23px;margin-top:8px">clib-package.c &mdash; <code style="font-family:var(--mono)">clib_package_new_from_slug_with_package_name()</code></p>
+    <div class="rule" style="margin:16px 0 20px"></div>
+
+    <div class="cols-2" style="gap:30px">
+
+      <div>
+        <div class="code__bar code__bar--before">
+          <span class="icon-wrap">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4.5M12 16h.01"/></svg>
+          </span>
+          Before
+        </div>
+        <div class="code">
+<pre><span class="ln"><span class="v">res</span> = <span class="f">http_get</span>(<span class="v">json_url</span>);</span><span class="ln ln--del"><span class="v">json</span> = <span class="v">res</span>-&gt;<span class="v">data</span>;</span><span class="ln"><span class="f">_debug</span>(<span class="s">"status: %d"</span>, <span class="v">res</span>-&gt;<span class="v">status</span>);</span><span class="ln"><span class="cf">if</span> (!<span class="v">res</span> || !<span class="v">res</span>-&gt;<span class="v">ok</span>) {</span><span class="ln">  <span class="cf">goto</span> <span class="v">download</span>;</span><span class="ln">}</span></pre>
+        </div>
+      </div>
+
+      <div>
+        <div class="code__bar code__bar--after">
+          <span class="icon-wrap">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.3l2.6 2.6L16 9.6"/></svg>
+          </span>
+          After
+        </div>
+        <div class="code">
+<pre><span class="ln"><span class="v">res</span> = <span class="f">http_get</span>(<span class="v">json_url</span>);</span><span class="ln ln--add"><span class="cf">if</span> (!<span class="v">res</span> || !<span class="v">res</span>-&gt;<span class="v">ok</span>) {</span><span class="ln ln--add">  <span class="cf">goto</span> <span class="v">download</span>;</span><span class="ln ln--add">}</span><span class="ln"><span class="v">json</span> = <span class="v">res</span>-&gt;<span class="v">data</span>;</span><span class="ln"><span class="f">_debug</span>(<span class="s">"status: %d"</span>, <span class="v">res</span>-&gt;<span class="v">status</span>);</span></pre>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <span class="icon-wrap">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9.5 17H2.5L12 3z"/><path d="M12 9.5v4.5M12 17h.01"/></svg>
+      </span>
+      <span><strong>A guaranteed crash on any network failure.</strong>
+      <code style="font-family:var(--mono)">http_get()</code> returns <code style="font-family:var(--mono)">NULL</code> on failure, and the original
+      code dereferenced it one line <em>before</em> its own NULL check.</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Chronos &middot; IBM Bob 2.0 Hackathon</span>
+    <span class="page-no">06 / 12</span>
+  </div>
+</div>
+
+</body>
+</html>
